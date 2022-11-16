@@ -1,0 +1,17 @@
+@import "./fonts";
+
+@import "./modal";
+
+body {
+  background-image: url(/images/giraflor_desk.png);
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  @media only screen and (max-width: 768px) {
+    background-image: url(/images/giraflor_mob.png);
+  }
+}

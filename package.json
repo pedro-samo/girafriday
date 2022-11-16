@@ -1,0 +1,24 @@
+{
+    "name": "giraflor-blackfriday",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "Pedro Morais",
+    "license": "MIT",
+    "scripts": {
+        "start": "gulp"
+    },
+    "dependencies": {
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^7.0.1",
+        "gulp-cli": "^2.3.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-sass": "^5.1.0",
+        "gulp-uglify": "^3.0.2",
+        "sass": "^1.49.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.12.9",
+        "@babel/preset-env": "^7.12.7",
+        "gulp-babel": "^8.0.0"
+    }
+}
