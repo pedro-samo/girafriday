@@ -14,4 +14,9 @@ body {
   @media only screen and (max-width: 768px) {
     background-image: url(/images/giraflor_mob.png);
   }
+
+  &.gbf {
+    overflow-y: hidden;
+    pointer-events: none;
+  }
 }

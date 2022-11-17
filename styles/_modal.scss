@@ -7,6 +7,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: all;
+    top: 0;
+    z-index: 2147483650 !important;
   }
 
   &_modal {
@@ -30,8 +33,9 @@
       margin: 0 auto;
       letter-spacing: 4px;
       text-transform: uppercase;
-      font-family: Chloe;
+      font-family: Chloe, serif;
       color: #423d3d;
+      font-weight: 700;
     }
 
     &-discount {
@@ -40,17 +44,18 @@
       align-items: center;
       background-color: #e91851;
       color: white;
-      font-family: Chloe;
+      font-family: Chloe, serif;
       height: 170px;
       width: 170px;
       border-radius: 85px;
       text-transform: uppercase;
       justify-content: center;
       letter-spacing: 2px;
+      font-weight: 700;
 
       p {
         margin: -3px auto;
-        font-size: 25px;
+        font-size: 22px;
       }
 
       &-value {
@@ -81,9 +86,20 @@
         background-color: #423d3d;
         border: none;
         height: 45px;
-        font-size: 22px;
+        font-size: 18px;
         color: white;
         text-align: center;
+
+        &::placeholder {
+          font-size: 18px;
+          font-family: "Montserrat", sans-serif;
+          text-transform: uppercase;
+          color: white;
+        }
+
+        &.error {
+          background-color: rgb(179, 2, 2);
+        }
       }
 
       button {

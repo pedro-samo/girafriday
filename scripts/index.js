@@ -1,5 +1,12 @@
-window.addEventListener("DOMContentLoaded", (event) => {
+window.addEventListener("DOMContentLoaded", () => {
+  const hasKeyOnLocalStorage = localStorage.getItem("gbf");
+
+  if (hasKeyOnLocalStorage === "true") return;
+
   const body = document.querySelector("body");
+
+  body.classList.add("gbf");
+
   const div = document.createElement("div");
   div.setAttribute("class", "blackfriday_overlay");
   div.innerHTML = `
@@ -12,7 +19,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       </div>
       <p class="blackfriday_modal-text">Vem aproveitar o seu <strong>acesso antecipado</strong> e garantir as suas peças com exclusividade antes de todo mundo.</p>
       <form>
-        <input type="password" />
+        <input type="password" placeholder="Senha" />
         <button type="submit">Entrar</button>
       <form>  
       <span>*O site libera para o público 00:00h</span>
@@ -26,8 +33,20 @@ window.addEventListener("DOMContentLoaded", (event) => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (input.value === "girafriday") {
+      localStorage.setItem("gbf", true);
+      body.classList.remove("gbf");
       const element = document.querySelector(".blackfriday_overlay");
       element.remove();
+    } else {
+      console.log("errouuuuu");
+      input.value = "SENHA INCORRETA";
+      input.setAttribute("type", "text");
+      input.classList.add("error");
+      setTimeout(() => {
+        input.classList.remove("error");
+        input.value = "";
+        input.setAttribute("type", "password");
+      }, 3000);
     }
   });
 });
