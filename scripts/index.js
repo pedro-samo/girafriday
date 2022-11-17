@@ -38,7 +38,6 @@ window.addEventListener("DOMContentLoaded", () => {
       const element = document.querySelector(".blackfriday_overlay");
       element.remove();
     } else {
-      console.log("errouuuuu");
       input.value = "SENHA INCORRETA";
       input.setAttribute("type", "text");
       input.classList.add("error");

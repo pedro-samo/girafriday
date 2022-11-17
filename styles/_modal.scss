@@ -33,9 +33,10 @@
       margin: 0 auto;
       letter-spacing: 4px;
       text-transform: uppercase;
-      font-family: Chloe, serif;
+      font-family: "Abril Fatface", serif;
       color: #423d3d;
-      font-weight: 700;
+      margin-bottom: 10px;
+      line-height: 0.9;
     }
 
     &-discount {
@@ -44,17 +45,15 @@
       align-items: center;
       background-color: #e91851;
       color: white;
-      font-family: Chloe, serif;
+      font-family: "Abril Fatface", serif;
       height: 170px;
       width: 170px;
       border-radius: 85px;
       text-transform: uppercase;
       justify-content: center;
       letter-spacing: 2px;
-      font-weight: 700;
 
       p {
-        margin: -3px auto;
         font-size: 22px;
       }
 
