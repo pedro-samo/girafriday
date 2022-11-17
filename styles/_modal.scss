@@ -36,7 +36,10 @@
       font-family: "Abril Fatface", serif;
       color: #423d3d;
       margin-bottom: 10px;
-      line-height: 0.9;
+
+      @media only screen and (max-width: 768px) {
+        line-height: 0.9;
+      }
     }
 
     &-discount {
@@ -54,7 +57,8 @@
       letter-spacing: 2px;
 
       p {
-        font-size: 22px;
+        font-size: 20px;
+        margin: -8px 0;
       }
 
       &-value {
