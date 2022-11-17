@@ -1,5 +1,5 @@
 @import "./fonts";
-
+@import "./reset";
 @import "./modal";
 
 body {
@@ -18,5 +18,9 @@ body {
   &.gbf {
     overflow-y: hidden;
     pointer-events: none;
+  }
+
+  &.gbf iframe {
+    display: none !important;
   }
 }

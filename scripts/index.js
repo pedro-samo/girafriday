@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const div = document.createElement("div");
   div.setAttribute("class", "blackfriday_overlay");
   div.innerHTML = `
-    <div class="blackfriday_modal">
+    <div class="blackfriday_modal slide-top">
       <h3>Gira Friday</h3>
       <div class="blackfriday_modal-discount">
         <p>Até</p>
@@ -32,11 +32,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (input.value === "girafriday") {
+    if (input.value === "melhorcliente") {
       localStorage.setItem("gbf", true);
       body.classList.remove("gbf");
       const element = document.querySelector(".blackfriday_overlay");
-      element.remove();
+      setTimeout(() => {
+        element.remove();
+      }, 500);
     } else {
       input.value = "SENHA INCORRETA";
       input.setAttribute("type", "text");
