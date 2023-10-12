@@ -9,7 +9,7 @@ var getTime = /*#__PURE__*/function () {
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-            fetch("http://worldtimeapi.org/api/timezone/America/Sao_Paulo").then(function (e) {
+            fetch("https://worldtimeapi.org/api/timezone/America/Sao_Paulo").then(function (e) {
               return e.json();
             }).then(function (e) {
               e = e.datetime;

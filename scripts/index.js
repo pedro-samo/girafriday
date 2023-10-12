@@ -1,5 +1,5 @@
 const getTime = async () => {
-  const url = "http://worldtimeapi.org/api/timezone/America/Sao_Paulo";
+  const url = "https://worldtimeapi.org/api/timezone/America/Sao_Paulo";
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
