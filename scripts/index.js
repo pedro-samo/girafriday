@@ -1,41 +1,54 @@
-window.addEventListener("DOMContentLoaded", () => {
-  const hasKeyOnLocalStorage = localStorage.getItem("gbf");
+const getTime = async () => {
+  const url = "http://worldtimeapi.org/api/timezone/America/Sao_Paulo";
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      const currentTime = data.datetime;
+      const promoStartTime = "2023-10-12T09:00:00.000000-03:00";
+      const promoEndTime = "2023-10-16T12:00:00.000000-03:00";
 
+      if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
+        mountElmentBlock();
+      }
+    })
+    .catch((error) => {
+      console.error(`Error fetching time data: ${error}`);
+    });
+};
+
+const mountElmentBlock = () => {
+  const hasKeyOnLocalStorage = localStorage.getItem("gbf23");
   if (hasKeyOnLocalStorage === "true") return;
 
   const body = document.querySelector("body");
 
-  body.classList.add("gbf");
+  body.classList.add("gbf23");
 
   const div = document.createElement("div");
-  div.setAttribute("class", "blackfriday_overlay");
+  div.setAttribute("class", "novosClassicos_overlay");
   div.innerHTML = `
-    <div class="blackfriday_modal slide-top">
-      <h3>Gira Friday</h3>
-      <div class="blackfriday_modal-discount">
-        <p>Até</p>
-        <p class="blackfriday_modal-discount-value">70%</p>
-        <p>Desconto</p>
+    <div class="novosClassicos_modal slide-top">
+      <div class="novosClassicos_modal-logo">
+        <img src="../images/novos_classicos.png" />
       </div>
-      <p class="blackfriday_modal-text">Vem aproveitar o seu <strong>acesso antecipado</strong> e garantir as suas peças com exclusividade antes de todo mundo.</p>
+      <p class="novosClassicos_modal-text">Acesso exclusivo - 09h às 12h</p>
       <form>
         <input type="password" placeholder="Senha" />
         <button type="submit">Entrar</button>
       <form>  
-      <span>*O site libera para o público 00:00h</span>
     </div>
   `;
   body.appendChild(div);
 
-  const form = document.querySelector(".blackfriday_modal form");
-  const input = document.querySelector(".blackfriday_modal input");
+  const form = document.querySelector(".novosClassicos_modal form");
+  const input = document.querySelector(".novosClassicos_modal input");
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (input.value === "melhorcliente") {
-      localStorage.setItem("gbf", true);
-      body.classList.remove("gbf");
-      const element = document.querySelector(".blackfriday_overlay");
+      localStorage.setItem("gbf23", true);
+      body.classList.remove("gbf23");
+      const element = document.querySelector(".novosClassicos_overlay");
       setTimeout(() => {
         element.remove();
       }, 500);
@@ -50,4 +63,8 @@ window.addEventListener("DOMContentLoaded", () => {
       }, 3000);
     }
   });
+};
+
+window.addEventListener("DOMContentLoaded", () => {
+  getTime();
 });

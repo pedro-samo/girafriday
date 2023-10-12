@@ -1,5 +1,4 @@
 @import "./fonts";
-@import "./reset";
 @import "./modal";
 
 body {
@@ -15,12 +14,12 @@ body {
     background-image: url(/images/giraflor_mob.png);
   }
 
-  &.gbf {
+  &.gbf23 {
     overflow-y: hidden;
     pointer-events: none;
   }
 
-  &.gbf iframe {
+  &.gbf23 iframe {
     display: none !important;
   }
 }

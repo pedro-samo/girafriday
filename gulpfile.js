@@ -21,13 +21,13 @@ function sassCompilation() {
 function gulpJs() {
   return gulp
     .src("scripts/*.js")
-    .pipe(concat("giraflor-blackFriday.js"))
+    .pipe(concat("giraflor-novosClassicos.js"))
+    .pipe(uglify())
     .pipe(
       babel({
         presets: ["@babel/env"],
       })
     )
-    .pipe(uglify())
     .pipe(gulp.dest("build/"));
 }
 
