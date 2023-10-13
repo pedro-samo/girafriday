@@ -13,7 +13,7 @@ var getTime = /*#__PURE__*/function () {
               return e.json();
             }).then(function (e) {
               e = e.datetime;
-              "2023-10-12T09:00:00.000000-03:00" <= e && e <= "2023-10-16T12:00:00.000000-03:00" && mountElmentBlock();
+              "2023-10-16T09:00:00.000000-03:00" <= e && e <= "2023-10-16T12:00:00.000000-03:00" && mountElmentBlock();
             })["catch"](function (e) {
               console.error("Error fetching time data: " + e);
             });
@@ -32,7 +32,7 @@ var getTime = /*#__PURE__*/function () {
     if ("true" !== e) {
       var o = document.querySelector("body"),
         t = (o.classList.add("gbf23"), document.createElement("div")),
-        s = (t.setAttribute("class", "novosClassicos_overlay"), t.innerHTML = "\n    <div class=\"novosClassicos_modal slide-top\">\n      <div class=\"novosClassicos_modal-logo\">\n        <img src=\"../images/novos_classicos.png\" />\n      </div>\n      <p class=\"novosClassicos_modal-text\">Acesso exclusivo - 09h \xE0s 12h</p>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>  \n    </div>\n  ", o.appendChild(t), document.querySelector(".novosClassicos_modal form")),
+        s = (t.setAttribute("class", "novosClassicos_overlay"), t.innerHTML = "\n    <div class=\"novosClassicos_modal slide-top\">\n      <div class=\"novosClassicos_modal-logo\">\n        <img src=\"https://51734.cdn.simplo7.net/static/51734/galeria/169723213652826.png\" />\n      </div>\n      <p class=\"novosClassicos_modal-text\">Acesso exclusivo - 09h \xE0s 12h</p>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>  \n    </div>\n  ", o.appendChild(t), document.querySelector(".novosClassicos_modal form")),
         a = document.querySelector(".novosClassicos_modal input");
       s.addEventListener("submit", function (e) {
         if (e.preventDefault(), "melhorcliente" === a.value) {

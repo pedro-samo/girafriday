@@ -4,7 +4,7 @@ const getTime = async () => {
     .then((response) => response.json())
     .then((data) => {
       const currentTime = data.datetime;
-      const promoStartTime = "2023-10-12T09:00:00.000000-03:00";
+      const promoStartTime = "2023-10-16T09:00:00.000000-03:00";
       const promoEndTime = "2023-10-16T12:00:00.000000-03:00";
 
       if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
@@ -29,7 +29,7 @@ const mountElmentBlock = () => {
   div.innerHTML = `
     <div class="novosClassicos_modal slide-top">
       <div class="novosClassicos_modal-logo">
-        <img src="../images/novos_classicos.png" />
+        <img src="https://51734.cdn.simplo7.net/static/51734/galeria/169723213652826.png" />
       </div>
       <p class="novosClassicos_modal-text">Acesso exclusivo - 09h às 12h</p>
       <form>
