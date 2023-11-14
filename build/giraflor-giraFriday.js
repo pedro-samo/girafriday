@@ -9,14 +9,7 @@ var getTime = /*#__PURE__*/function () {
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-            fetch("https://worldtimeapi.org/api/timezone/America/Sao_Paulo").then(function (e) {
-              return e.json();
-            }).then(function (e) {
-              e = e.datetime;
-              "2023-10-16T09:00:00.000000-03:00" <= e && e <= "2023-10-16T12:00:00.000000-03:00" && mountElmentBlock();
-            })["catch"](function (e) {
-              console.error("Error fetching time data: " + e);
-            });
+            mountElmentBlock();
           case 1:
           case "end":
             return _context.stop();
@@ -28,21 +21,21 @@ var getTime = /*#__PURE__*/function () {
     };
   }(),
   mountElmentBlock = function mountElmentBlock() {
-    var e = localStorage.getItem("gbf23");
+    var e = localStorage.getItem("gf23");
     if ("true" !== e) {
-      var o = document.querySelector("body"),
-        t = (o.classList.add("gbf23"), document.createElement("div")),
-        s = (t.setAttribute("class", "novosClassicos_overlay"), t.innerHTML = "\n    <div class=\"novosClassicos_modal slide-top\">\n      <div class=\"novosClassicos_modal-logo\">\n        <img src=\"https://51734.cdn.simplo7.net/static/51734/galeria/169723213652826.png\" />\n      </div>\n      <p class=\"novosClassicos_modal-text\">Acesso exclusivo - 09h \xE0s 12h</p>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>  \n    </div>\n  ", o.appendChild(t), document.querySelector(".novosClassicos_modal form")),
-        a = document.querySelector(".novosClassicos_modal input");
-      s.addEventListener("submit", function (e) {
-        if (e.preventDefault(), "melhorcliente" === a.value) {
-          localStorage.setItem("gbf23", !0), o.classList.remove("gbf23");
-          var _t = document.querySelector(".novosClassicos_overlay");
+      var r = document.querySelector("body"),
+        t = (r.classList.add("gf23"), document.createElement("div")),
+        a = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"../images/giraFriday_logo.png\" />\n      </div>\n      <p class=\"giraFriday_modal-text\">Acesso exclusivo - 09h \xE0s 12h</p>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>  \n    </div>\n  ", r.appendChild(t), document.querySelector(".giraFriday_modal form")),
+        o = document.querySelector(".giraFriday_modal input");
+      a.addEventListener("submit", function (e) {
+        if (e.preventDefault(), "melhorcliente" === o.value) {
+          localStorage.setItem("gf23", !0), r.classList.remove("gf23");
+          var _t = document.querySelector(".giraFriday_overlay");
           setTimeout(function () {
             _t.remove();
           }, 500);
-        } else a.value = "SENHA INCORRETA", a.setAttribute("type", "text"), a.classList.add("error"), setTimeout(function () {
-          a.classList.remove("error"), a.value = "", a.setAttribute("type", "password");
+        } else o.value = "SENHA INCORRETA", o.setAttribute("type", "text"), o.classList.add("error"), setTimeout(function () {
+          o.classList.remove("error"), o.value = "", o.setAttribute("type", "password");
         }, 3e3);
       });
     }

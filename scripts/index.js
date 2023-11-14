@@ -1,37 +1,39 @@
 const getTime = async () => {
-  const url = "https://worldtimeapi.org/api/timezone/America/Sao_Paulo";
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      const currentTime = data.datetime;
-      const promoStartTime = "2023-10-16T09:00:00.000000-03:00";
-      const promoEndTime = "2023-10-16T12:00:00.000000-03:00";
+  // const url = "https://worldtimeapi.org/api/timezone/America/Sao_Paulo";
+  // fetch(url)
+  //   .then((response) => response.json())
+  //   .then((data) => {
+  //     const currentTime = data.datetime;
+  //     const promoStartTime = "2023-10-16T09:00:00.000000-03:00";
+  //     const promoEndTime = "2023-10-16T12:00:00.000000-03:00";
 
-      if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
-        mountElmentBlock();
-      }
-    })
-    .catch((error) => {
-      console.error(`Error fetching time data: ${error}`);
-    });
+  //     if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
+  //       mountElmentBlock();
+  //     }
+  //   })
+  //   .catch((error) => {
+  //     console.error(`Error fetching time data: ${error}`);
+  //   });
+
+  mountElmentBlock();
 };
 
 const mountElmentBlock = () => {
-  const hasKeyOnLocalStorage = localStorage.getItem("gbf23");
+  const hasKeyOnLocalStorage = localStorage.getItem("gf23");
   if (hasKeyOnLocalStorage === "true") return;
 
   const body = document.querySelector("body");
 
-  body.classList.add("gbf23");
+  body.classList.add("gf23");
 
   const div = document.createElement("div");
-  div.setAttribute("class", "novosClassicos_overlay");
+  div.setAttribute("class", "giraFriday_overlay");
   div.innerHTML = `
-    <div class="novosClassicos_modal slide-top">
-      <div class="novosClassicos_modal-logo">
-        <img src="https://51734.cdn.simplo7.net/static/51734/galeria/169723213652826.png" />
+    <div class="giraFriday_modal slide-top">
+      <div class="giraFriday_modal-logo">
+        <img src="../images/giraFriday_logo.png" />
       </div>
-      <p class="novosClassicos_modal-text">Acesso exclusivo - 09h às 12h</p>
+      <p class="giraFriday_modal-text">Acesso exclusivo - 09h às 12h</p>
       <form>
         <input type="password" placeholder="Senha" />
         <button type="submit">Entrar</button>
@@ -40,15 +42,15 @@ const mountElmentBlock = () => {
   `;
   body.appendChild(div);
 
-  const form = document.querySelector(".novosClassicos_modal form");
-  const input = document.querySelector(".novosClassicos_modal input");
+  const form = document.querySelector(".giraFriday_modal form");
+  const input = document.querySelector(".giraFriday_modal input");
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (input.value === "melhorcliente") {
-      localStorage.setItem("gbf23", true);
-      body.classList.remove("gbf23");
-      const element = document.querySelector(".novosClassicos_overlay");
+      localStorage.setItem("gf23", true);
+      body.classList.remove("gf23");
+      const element = document.querySelector(".giraFriday_overlay");
       setTimeout(() => {
         element.remove();
       }, 500);

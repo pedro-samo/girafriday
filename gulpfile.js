@@ -21,7 +21,7 @@ function sassCompilation() {
 function gulpJs() {
   return gulp
     .src("scripts/*.js")
-    .pipe(concat("giraflor-novosClassicos.js"))
+    .pipe(concat("giraflor-giraFriday.js"))
     .pipe(uglify())
     .pipe(
       babel({

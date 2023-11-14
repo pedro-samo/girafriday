@@ -1,8 +1,8 @@
-.novosClassicos {
+.giraFriday {
   &_overlay {
     width: 100vw;
     height: 100vh;
-    background-image: url("https://51734.cdn.simplo7.net/static/51734/galeria/169723213620633.jpg");
+    background-color: rgba(#fff, 0.6);
     position: fixed;
     display: flex;
     justify-content: center;
@@ -18,10 +18,12 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 20px 70px;
+    padding: 40px 80px;
     font-family: "Forum", serif;
+    background-image: url("../images/giraFriday_fundo.jpg");
+    box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.33);
 
-    &.slide-top {
+    drop &.slide-top {
       animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     }
 
@@ -37,7 +39,7 @@
     @media only screen and (max-width: 768px) {
       margin: auto 10px;
       text-align: center;
-      padding: 10px;
+      padding: 30px 10px;
     }
 
     &-logo {
@@ -78,7 +80,7 @@
       width: 80%;
 
       input {
-        background-color: #be752c;
+        background-color: #ff3407;
         border: none;
         height: 45px;
         font-size: 20px;
@@ -103,7 +105,7 @@
       }
 
       button {
-        background-color: #a15e1b;
+        background-color: #ff3407;
         color: #ececea;
         font-size: 18px;
         font-family: "Forum", serif;
@@ -116,7 +118,7 @@
         transition: all 1;
 
         &:hover {
-          background-color: #81480f;
+          background-color: #df2e06;
         }
       }
     }
