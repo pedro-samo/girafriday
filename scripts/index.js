@@ -1,21 +1,19 @@
 const getTime = async () => {
-  // const url = "https://worldtimeapi.org/api/timezone/America/Sao_Paulo";
-  // fetch(url)
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     const currentTime = data.datetime;
-  //     const promoStartTime = "2023-10-16T09:00:00.000000-03:00";
-  //     const promoEndTime = "2023-10-16T12:00:00.000000-03:00";
+  const url = "https://worldtimeapi.org/api/timezone/America/Sao_Paulo";
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      const currentTime = data.datetime;
+      const promoStartTime = "2023-11-17T09:00:00.000000-03:00";
+      const promoEndTime = "2023-11-17T21:00:00.000000-03:00";
 
-  //     if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
-  //       mountElmentBlock();
-  //     }
-  //   })
-  //   .catch((error) => {
-  //     console.error(`Error fetching time data: ${error}`);
-  //   });
-
-  mountElmentBlock();
+      if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
+        mountElmentBlock();
+      }
+    })
+    .catch((error) => {
+      console.error(`Error fetching time data: ${error}`);
+    });
 };
 
 const mountElmentBlock = () => {
@@ -33,7 +31,7 @@ const mountElmentBlock = () => {
       <div class="giraFriday_modal-logo">
         <img src="../images/giraFriday_logo.png" />
       </div>
-      <p class="giraFriday_modal-text">Acesso exclusivo - 09h às 12h</p>
+      <p class="giraFriday_modal-text">Acesso exclusivo - 09h às 21h</p>
       <form>
         <input type="password" placeholder="Senha" />
         <button type="submit">Entrar</button>
@@ -47,7 +45,7 @@ const mountElmentBlock = () => {
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (input.value === "melhorcliente") {
+    if (input.value.toLowerCase() === "aproveita") {
       localStorage.setItem("gf23", true);
       body.classList.remove("gf23");
       const element = document.querySelector(".giraFriday_overlay");

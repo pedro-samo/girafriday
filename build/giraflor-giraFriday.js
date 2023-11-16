@@ -9,7 +9,14 @@ var getTime = /*#__PURE__*/function () {
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-            mountElmentBlock();
+            fetch("https://worldtimeapi.org/api/timezone/America/Sao_Paulo").then(function (e) {
+              return e.json();
+            }).then(function (e) {
+              e = e.datetime;
+              "2023-11-17T09:00:00.000000-03:00" <= e && e <= "2023-11-17T21:00:00.000000-03:00" && mountElmentBlock();
+            })["catch"](function (e) {
+              console.error("Error fetching time data: " + e);
+            });
           case 1:
           case "end":
             return _context.stop();
@@ -25,10 +32,10 @@ var getTime = /*#__PURE__*/function () {
     if ("true" !== e) {
       var r = document.querySelector("body"),
         t = (r.classList.add("gf23"), document.createElement("div")),
-        a = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"../images/giraFriday_logo.png\" />\n      </div>\n      <p class=\"giraFriday_modal-text\">Acesso exclusivo - 09h \xE0s 12h</p>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>  \n    </div>\n  ", r.appendChild(t), document.querySelector(".giraFriday_modal form")),
+        a = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"../images/giraFriday_logo.png\" />\n      </div>\n      <p class=\"giraFriday_modal-text\">Acesso exclusivo - 09h \xE0s 21h</p>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>  \n    </div>\n  ", r.appendChild(t), document.querySelector(".giraFriday_modal form")),
         o = document.querySelector(".giraFriday_modal input");
       a.addEventListener("submit", function (e) {
-        if (e.preventDefault(), "melhorcliente" === o.value) {
+        if (e.preventDefault(), "aproveita" === o.value.toLowerCase()) {
           localStorage.setItem("gf23", !0), r.classList.remove("gf23");
           var _t = document.querySelector(".giraFriday_overlay");
           setTimeout(function () {
