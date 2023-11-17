@@ -29,7 +29,7 @@ const mountElmentBlock = () => {
   div.innerHTML = `
     <div class="giraFriday_modal slide-top">
       <div class="giraFriday_modal-logo">
-        <img src="../images/giraFriday_logo.png" />
+        <img src="https://51734.cdn.simplo7.net/static/51734/galeria/170022248614853.png" />
       </div>
       <p class="giraFriday_modal-text">Acesso exclusivo - 09h às 21h</p>
       <form>

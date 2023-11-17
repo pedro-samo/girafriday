@@ -30,13 +30,13 @@ var getTime = /*#__PURE__*/function () {
   mountElmentBlock = function mountElmentBlock() {
     var e = localStorage.getItem("gf23");
     if ("true" !== e) {
-      var r = document.querySelector("body"),
-        t = (r.classList.add("gf23"), document.createElement("div")),
-        a = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"../images/giraFriday_logo.png\" />\n      </div>\n      <p class=\"giraFriday_modal-text\">Acesso exclusivo - 09h \xE0s 21h</p>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>  \n    </div>\n  ", r.appendChild(t), document.querySelector(".giraFriday_modal form")),
+      var a = document.querySelector("body"),
+        t = (a.classList.add("gf23"), document.createElement("div")),
+        r = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"https://51734.cdn.simplo7.net/static/51734/galeria/170022248614853.png\" />\n      </div>\n      <p class=\"giraFriday_modal-text\">Acesso exclusivo - 09h \xE0s 21h</p>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>  \n    </div>\n  ", a.appendChild(t), document.querySelector(".giraFriday_modal form")),
         o = document.querySelector(".giraFriday_modal input");
-      a.addEventListener("submit", function (e) {
+      r.addEventListener("submit", function (e) {
         if (e.preventDefault(), "aproveita" === o.value.toLowerCase()) {
-          localStorage.setItem("gf23", !0), r.classList.remove("gf23");
+          localStorage.setItem("gf23", !0), a.classList.remove("gf23");
           var _t = document.querySelector(".giraFriday_overlay");
           setTimeout(function () {
             _t.remove();
