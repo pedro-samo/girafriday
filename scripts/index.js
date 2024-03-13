@@ -34,7 +34,7 @@ const mountElmentBlock = () => {
         <img src="../images/FLOR.png" />
       </div>
       <p class="giraFriday_modal-text">Descontos de até 50% off no site todo</p>
-      <p class="giraFriday_modal-subtext">Acesso exclusivo para você - 09h às 12h</p>
+      <p class="giraFriday_modal-subtext">Acesso Exclusivo para você - das 9h ás 12h</p>
       <form>
         <input type="password" placeholder="Senha" />
         <button type="submit">Entrar</button>
@@ -48,7 +48,7 @@ const mountElmentBlock = () => {
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (input.value.toLowerCase() === "aproveita") {
+    if (input.value.toLowerCase() === "aproveitadescontos") {
       localStorage.setItem("gf24", true);
       body.classList.remove("gf23");
       const element = document.querySelector(".giraFriday_overlay");
