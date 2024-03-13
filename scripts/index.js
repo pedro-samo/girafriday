@@ -4,8 +4,8 @@ const getTime = async () => {
     .then((response) => response.json())
     .then((data) => {
       const currentTime = data.datetime;
-      const promoStartTime = "2023-11-17T09:00:00.000000-03:00";
-      const promoEndTime = "2023-11-17T21:00:00.000000-03:00";
+      const promoStartTime = "2024-03-12T09:00:00.000000-03:00";
+      const promoEndTime = "2024-03-15T12:00:00.000000-03:00";
 
       if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
         mountElmentBlock();
@@ -17,7 +17,7 @@ const getTime = async () => {
 };
 
 const mountElmentBlock = () => {
-  const hasKeyOnLocalStorage = localStorage.getItem("gf23");
+  const hasKeyOnLocalStorage = localStorage.getItem("gf24");
   if (hasKeyOnLocalStorage === "true") return;
 
   const body = document.querySelector("body");
@@ -29,9 +29,12 @@ const mountElmentBlock = () => {
   div.innerHTML = `
     <div class="giraFriday_modal slide-top">
       <div class="giraFriday_modal-logo">
-        <img src="https://51734.cdn.simplo7.net/static/51734/galeria/170022248614853.png" />
+        <h2 class="giraFriday_modal-logo_title">Semana</h2>
+        <h2 class="giraFriday_modal-logo_subtitle">Cliente Gira</h2>
+        <img src="../images/FLOR.png" />
       </div>
-      <p class="giraFriday_modal-text">Acesso exclusivo - 09h às 21h</p>
+      <p class="giraFriday_modal-text">Descontos de até 50% off no site todo</p>
+      <p class="giraFriday_modal-subtext">Acesso exclusivo para você - 09h às 12h</p>
       <form>
         <input type="password" placeholder="Senha" />
         <button type="submit">Entrar</button>
@@ -46,7 +49,7 @@ const mountElmentBlock = () => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (input.value.toLowerCase() === "aproveita") {
-      localStorage.setItem("gf23", true);
+      localStorage.setItem("gf24", true);
       body.classList.remove("gf23");
       const element = document.querySelector(".giraFriday_overlay");
       setTimeout(() => {
