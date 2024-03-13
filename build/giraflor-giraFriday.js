@@ -32,17 +32,17 @@ var getTime = /*#__PURE__*/function () {
     if ("true" !== e) {
       var a = document.querySelector("body"),
         t = (a.classList.add("gf23"), document.createElement("div")),
-        o = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <h2 class=\"giraFriday_modal-logo_title\">Semana</h2>\n        <h2 class=\"giraFriday_modal-logo_subtitle\">Cliente Gira</h2>\n        <img src=\"../images/FLOR.png\" />\n      </div>\n      <p class=\"giraFriday_modal-text\">Descontos de at\xE9 50% off no site todo</p>\n      <p class=\"giraFriday_modal-subtext\">Acesso exclusivo para voc\xEA - 09h \xE0s 12h</p>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>  \n    </div>\n  ", a.appendChild(t), document.querySelector(".giraFriday_modal form")),
+        o = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <h2 class=\"giraFriday_modal-logo_title\">Semana</h2>\n        <h2 class=\"giraFriday_modal-logo_subtitle\">Cliente Gira</h2>\n        <img src=\"../images/FLOR.png\" />\n      </div>\n      <p class=\"giraFriday_modal-text\">Descontos de at\xE9 50% off no site todo</p>\n      <p class=\"giraFriday_modal-subtext\">Acesso Exclusivo para voc\xEA - das 9h \xE1s 12h</p>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>  \n    </div>\n  ", a.appendChild(t), document.querySelector(".giraFriday_modal form")),
         r = document.querySelector(".giraFriday_modal input");
       o.addEventListener("submit", function (e) {
-        if (e.preventDefault(), "aproveita" === r.value.toLowerCase()) {
+        if (e.preventDefault(), "aproveitadescontos" === r.value.toLowerCase()) {
           localStorage.setItem("gf24", !0), a.classList.remove("gf23");
           var _t = document.querySelector(".giraFriday_overlay");
           setTimeout(function () {
             _t.remove();
           }, 500);
-        } else r.value = "SENHA INCORRETA", r.setAttribute("type", "text"), r.classList.add("error"), setTimeout(function () {
-          r.classList.remove("error"), r.value = "", r.setAttribute("type", "password");
+        } else r.value = "SENHA INCORRETA", r.setAttribute("type", "text"), r.classList.add("error"), r.disable = !0, setTimeout(function () {
+          r.disable = !1, r.classList.remove("error"), r.value = "", r.setAttribute("type", "password");
         }, 3e3);
       });
     }

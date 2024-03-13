@@ -59,7 +59,9 @@ const mountElmentBlock = () => {
       input.value = "SENHA INCORRETA";
       input.setAttribute("type", "text");
       input.classList.add("error");
+      input.disable = true;
       setTimeout(() => {
+        input.disable = false;
         input.classList.remove("error");
         input.value = "";
         input.setAttribute("type", "password");
