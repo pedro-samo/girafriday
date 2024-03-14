@@ -4,7 +4,7 @@ const getTime = async () => {
     .then((response) => response.json())
     .then((data) => {
       const currentTime = data.datetime;
-      const promoStartTime = "2024-03-12T09:00:00.000000-03:00";
+      const promoStartTime = "2024-03-11T09:00:00.000000-03:00";
       const promoEndTime = "2024-03-15T12:00:00.000000-03:00";
 
       if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
@@ -34,7 +34,7 @@ const mountElmentBlock = () => {
         <img src="../images/FLOR.png" />
       </div>
       <p class="giraFriday_modal-text">Descontos de até 50% off no site todo</p>
-      <p class="giraFriday_modal-subtext">Acesso Exclusivo para você - das 9h ás 12h</p>
+      <p class="giraFriday_modal-subtext">Acesso Exclusivo - das 9h ás 12h</p>
       <form>
         <input type="password" placeholder="Senha" />
         <button type="submit">Entrar</button>
