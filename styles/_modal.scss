@@ -81,11 +81,11 @@
 
       img {
         position: absolute;
-        right: -90;
+        right: -80;
         width: 120px;
 
         @media only screen and (max-width: 768px) {
-          right: -70;
+          right: -55;
           width: 70px;
         }
       }
