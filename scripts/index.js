@@ -34,7 +34,7 @@ const mountElmentBlock = () => {
         <img src="../images/FLOR.png" />
       </div>
       <p class="giraFriday_modal-text">Descontos de até 50% off no site todo</p>
-      <p class="giraFriday_modal-subtext">Acesso Exclusivo - das 9h ás 12h</p>
+      <p class="giraFriday_modal-subtext">Acesso Exclusivo - Somente das 9h ás 12h</p>
       <form>
         <input type="password" placeholder="Senha" />
         <button type="submit">Entrar</button>
