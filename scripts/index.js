@@ -4,7 +4,7 @@ const getTime = async () => {
     .then((response) => response.json())
     .then((data) => {
       const currentTime = data.datetime;
-      const promoStartTime = "2024-03-11T09:00:00.000000-03:00";
+      const promoStartTime = "2024-03-15T09:00:00.000000-03:00";
       const promoEndTime = "2024-03-15T12:00:00.000000-03:00";
 
       if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
@@ -31,7 +31,7 @@ const mountElmentBlock = () => {
       <div class="giraFriday_modal-logo">
         <h2 class="giraFriday_modal-logo_title">Semana</h2>
         <h2 class="giraFriday_modal-logo_subtitle">Cliente Gira</h2>
-        <img src="../images/FLOR.png" />
+        <img src="https://51734.cdn.simplo7.net/static/51734/galeria/171043438690840.png" />
       </div>
       <p class="giraFriday_modal-text">Descontos de até 50% off no site todo</p>
       <p class="giraFriday_modal-subtext">Acesso Exclusivo - Somente das 9h ás 12h</p>
