@@ -13,7 +13,7 @@ var getTime = /*#__PURE__*/function () {
               return e.json();
             }).then(function (e) {
               e = e.datetime;
-              "2024-03-15T09:00:00.000000-03:00" <= e && e <= "2024-03-15T12:00:00.000000-03:00" && mountElmentBlock();
+              "2024-03-11T09:00:00.000000-03:00" <= e && e <= "2024-03-15T12:00:00.000000-03:00" && mountElmentBlock();
             })["catch"](function (e) {
               console.error("Error fetching time data: " + e);
             });
@@ -32,7 +32,7 @@ var getTime = /*#__PURE__*/function () {
     if ("true" !== e) {
       var a = document.querySelector("body"),
         t = (a.classList.add("gf23"), document.createElement("div")),
-        o = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <h2 class=\"giraFriday_modal-logo_title\">Semana</h2>\n        <h2 class=\"giraFriday_modal-logo_subtitle\">Cliente Gira</h2>\n        <img src=\"../images/FLOR.png\" />\n      </div>\n      <p class=\"giraFriday_modal-text\">Descontos de at\xE9 50% off no site todo</p>\n      <p class=\"giraFriday_modal-subtext\">Acesso Exclusivo para voc\xEA - das 9h \xE1s 12h</p>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>  \n    </div>\n  ", a.appendChild(t), document.querySelector(".giraFriday_modal form")),
+        o = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <h2 class=\"giraFriday_modal-logo_title\">Semana</h2>\n        <h2 class=\"giraFriday_modal-logo_subtitle\">Cliente Gira</h2>\n        <img src=\"../images/FLOR.png\" />\n      </div>\n      <p class=\"giraFriday_modal-text\">Descontos de at\xE9 50% off no site todo</p>\n      <p class=\"giraFriday_modal-subtext\">Acesso Exclusivo - das 9h \xE1s 12h</p>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>  \n    </div>\n  ", a.appendChild(t), document.querySelector(".giraFriday_modal form")),
         r = document.querySelector(".giraFriday_modal input");
       o.addEventListener("submit", function (e) {
         if (e.preventDefault(), "aproveitadescontos" === r.value.toLowerCase()) {
