@@ -47,6 +47,7 @@
       justify-content: center;
       flex-direction: column;
       position: relative;
+      margin-bottom: 20px;
 
       @media only screen and (max-width: 768px) {
         margin-bottom: 20px !important;
@@ -60,12 +61,12 @@
 
       &_title {
         font-size: 90px;
-        margin-bottom: -30px !important;
+        margin-bottom: 40px !important;
         font-weight: 100;
 
         @media only screen and (max-width: 768px) {
           font-size: 50px;
-          margin-bottom: -10px !important;
+          margin-bottom: 20px !important;
         }
       }
 
@@ -81,12 +82,14 @@
 
       img {
         position: absolute;
-        right: -80;
+        right: -80px;
         width: 120px;
 
         @media only screen and (max-width: 768px) {
-          right: -55;
+          right: -55px;
           width: 70px;
+          max-width: none !important;
+          max-height: none !important;
         }
       }
     }
