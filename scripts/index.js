@@ -17,7 +17,8 @@ const getTime = async () => {
 };
 
 const mountElmentBlock = () => {
-  const hasKeyOnLocalStorage = localStorage.getItem("gf24");
+  const hasKeyOnLocalStorage = localStorage.getItem("gf24-junho");
+
   if (hasKeyOnLocalStorage === "true") return;
 
   const body = document.querySelector("body");

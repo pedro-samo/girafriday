@@ -28,7 +28,7 @@ var getTime = /*#__PURE__*/function () {
     };
   }(),
   mountElmentBlock = function mountElmentBlock() {
-    var e = localStorage.getItem("gf24");
+    var e = localStorage.getItem("gf24-junho");
     if ("true" !== e) {
       var o = document.querySelector("body"),
         t = (o.classList.add("gf24-junho"), document.createElement("div")),
