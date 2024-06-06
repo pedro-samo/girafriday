@@ -19,7 +19,7 @@
     justify-content: center;
     flex-direction: column;
     padding: 60px 100px;
-    background-image: url("https://51734.cdn.simplo7.net/static/51734/galeria/171043439922202.jpg");
+    background-image: url("/images/motetom_back.jpg");
     box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.33);
 
     drop &.slide-top {
@@ -81,15 +81,10 @@
       }
 
       img {
-        position: absolute;
-        right: -80px;
-        width: 120px;
+        width: 600px;
 
         @media only screen and (max-width: 768px) {
-          right: -55px;
-          width: 70px;
-          max-width: none !important;
-          max-height: none !important;
+          width: 250px;
         }
       }
     }
@@ -106,7 +101,7 @@
       margin: 25px 0 0;
 
       @media only screen and (max-width: 768px) {
-        font-size: 18px;
+        font-size: 14px;
         margin: 0;
         line-height: 1.4;
         letter-spacing: 3px;
@@ -115,7 +110,7 @@
 
     &-subtext {
       font-family: "Now";
-      font-weight: 500;
+      font-weight: 700;
       letter-spacing: 5px;
       color: #191919;
       text-transform: uppercase;
@@ -125,10 +120,26 @@
       margin: 0px;
 
       @media only screen and (max-width: 768px) {
-        font-size: 14px;
+        font-size: 12px;
         margin-top: 10px;
         letter-spacing: 3px;
-        line-height: 1.2;
+        line-height: 1.4;
+      }
+
+      &.desktop {
+        display: block;
+
+        @media only screen and (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      &.mobile {
+        display: none;
+
+        @media only screen and (max-width: 768px) {
+          display: block;
+        }
       }
     }
 
@@ -140,7 +151,7 @@
       margin-top: 30px;
 
       input {
-        background-color: #ec9a50;
+        background-color: #252525;
         border: none;
         height: 45px;
         font-size: 20px;
@@ -179,7 +190,7 @@
       }
 
       button {
-        background-color: #ec9a50;
+        background-color: #252525;
         color: #ececea;
         font-size: 18px;
         font-family: "Forum", serif;
@@ -197,7 +208,7 @@
         }
 
         &:hover {
-          background-color: #d88b49;
+          background-color: #0e0e0e;
         }
       }
     }

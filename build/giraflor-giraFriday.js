@@ -13,7 +13,7 @@ var getTime = /*#__PURE__*/function () {
               return e.json();
             }).then(function (e) {
               e = e.datetime;
-              "2024-03-15T09:00:00.000000-03:00" <= e && e <= "2024-03-15T12:00:00.000000-03:00" && mountElmentBlock();
+              "2024-06-05T09:00:00.000000-03:00" <= e && e <= "2024-06-15T12:00:00.000000-03:00" && mountElmentBlock();
             })["catch"](function (e) {
               console.error("Error fetching time data: " + e);
             });
@@ -30,13 +30,13 @@ var getTime = /*#__PURE__*/function () {
   mountElmentBlock = function mountElmentBlock() {
     var e = localStorage.getItem("gf24");
     if ("true" !== e) {
-      var a = document.querySelector("body"),
-        t = (a.classList.add("gf23"), document.createElement("div")),
-        o = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <h2 class=\"giraFriday_modal-logo_title\">Semana</h2>\n        <h2 class=\"giraFriday_modal-logo_subtitle\">Cliente Gira</h2>\n        <img src=\"https://51734.cdn.simplo7.net/static/51734/galeria/171043438690840.png\" />\n      </div>\n      <p class=\"giraFriday_modal-text\">Descontos de at\xE9 50% off no site todo</p>\n      <p class=\"giraFriday_modal-subtext\">Acesso Exclusivo - Somente das 9h \xE1s 12h</p>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>  \n    </div>\n  ", a.appendChild(t), document.querySelector(".giraFriday_modal form")),
+      var o = document.querySelector("body"),
+        t = (o.classList.add("gf24-junho"), document.createElement("div")),
+        a = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"./images/moletom.png\" />\n      </div>\n      <p class=\"giraFriday_modal-text\">Drop 2 - Cole\xE7\xE3o aconchego est\xE1 dispon\xEDvel!</p>\n      <p class=\"giraFriday_modal-subtext desktop\">Acesso Exclusivo para voc\xEA - Das 9h \xE0s 12h</p>\n      <p class=\"giraFriday_modal-subtext mobile\">Acesso Exclusivo para voc\xEA <br> Das 9h \xE0s 12h</p>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>  \n    </div>\n  ", o.appendChild(t), document.querySelector(".giraFriday_modal form")),
         r = document.querySelector(".giraFriday_modal input");
-      o.addEventListener("submit", function (e) {
-        if (e.preventDefault(), "aproveitadescontos" === r.value.toLowerCase()) {
-          localStorage.setItem("gf24", !0), a.classList.remove("gf23");
+      a.addEventListener("submit", function (e) {
+        if (e.preventDefault(), "aproveita" === r.value.toLowerCase()) {
+          localStorage.setItem("gf24-junho", !0), o.classList.remove("gf24-junho");
           var _t = document.querySelector(".giraFriday_overlay");
           setTimeout(function () {
             _t.remove();
