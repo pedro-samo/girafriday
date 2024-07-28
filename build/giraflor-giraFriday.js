@@ -30,23 +30,47 @@ var getTime = /*#__PURE__*/function () {
   mountElmentBlock = function mountElmentBlock() {
     var e = localStorage.getItem("gf24-junho");
     if ("true" !== e) {
-      var a = document.querySelector("body"),
-        t = (a.classList.add("gf24-junho"), document.createElement("div")),
-        o = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"https://51734.cdn.simplo7.net/static/51734/galeria/171770668324671.png\" />\n      </div>\n      <p class=\"giraFriday_modal-text\">Drop 2 - Cole\xE7\xE3o aconchego est\xE1 dispon\xEDvel!</p>\n      <p class=\"giraFriday_modal-subtext desktop\">Acesso Exclusivo para voc\xEA - Das 9h \xE0s 12h</p>\n      <p class=\"giraFriday_modal-subtext mobile\">Acesso Exclusivo para voc\xEA <br> Das 9h \xE0s 12h</p>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>  \n    </div>\n  ", a.appendChild(t), document.querySelector(".giraFriday_modal form")),
-        r = document.querySelector(".giraFriday_modal input");
-      o.addEventListener("submit", function (e) {
-        if (e.preventDefault(), "aproveita" === r.value.toLowerCase()) {
-          localStorage.setItem("gf24-junho", !0), a.classList.remove("gf24-junho");
+      var o = document.querySelector("body"),
+        t = (o.classList.add("gf24-junho"), document.createElement("div")),
+        r = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"https://51734.cdn.simplo7.net/static/51734/galeria/171770668324671.png\" />\n      </div>\n      <p class=\"giraFriday_modal-text\">Drop 2 - Cole\xE7\xE3o aconchego est\xE1 dispon\xEDvel!</p>\n      <p class=\"giraFriday_modal-subtext desktop\">Acesso Exclusivo para voc\xEA - Das 9h \xE0s 12h</p>\n      <p class=\"giraFriday_modal-subtext mobile\">Acesso Exclusivo para voc\xEA <br> Das 9h \xE0s 12h</p>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>  \n    </div>\n  ", o.appendChild(t), document.querySelector(".giraFriday_modal form")),
+        a = document.querySelector(".giraFriday_modal input");
+      r.addEventListener("submit", function (e) {
+        if (e.preventDefault(), "aproveita" === a.value.toLowerCase()) {
+          localStorage.setItem("gf24-junho", !0), o.classList.remove("gf24-junho");
           var _t = document.querySelector(".giraFriday_overlay");
           setTimeout(function () {
             _t.remove();
           }, 500);
-        } else r.value = "SENHA INCORRETA", r.setAttribute("type", "text"), r.classList.add("error"), r.disable = !0, setTimeout(function () {
-          r.disable = !1, r.classList.remove("error"), r.value = "", r.setAttribute("type", "password");
+        } else a.value = "SENHA INCORRETA", a.setAttribute("type", "text"), a.classList.add("error"), a.disable = !0, setTimeout(function () {
+          a.disable = !1, a.classList.remove("error"), a.value = "", a.setAttribute("type", "password");
         }, 3e3);
       });
     }
+  },
+  changeGoBackButton = function changeGoBackButton() {
+    if (window.location.pathname.includes("carrinho")) {
+      var o = ".cart-products-list",
+        r = function r() {
+          var e = document.querySelectorAll(".cart-item-name a");
+          if (Array.from(e).some(function (e) {
+            return e.href.includes("promo-trico");
+          })) {
+            var t = document.querySelector(".row .link");
+            t.setAttribute("href", "https://www.giraflorstore.com.br/promo-tricot-66a2a31fe987d");
+          }
+        },
+        e = document.querySelector(o);
+      if (e) r(e);else {
+        var t = new MutationObserver(function (e, t) {
+          document.querySelector(o) && (r(document.querySelector(o)), t.disconnect());
+        });
+        t.observe(document.body, {
+          childList: !0,
+          subtree: !0
+        });
+      }
+    }
   };
 window.addEventListener("DOMContentLoaded", function () {
-  getTime();
+  getTime(), changeGoBackButton();
 });
