@@ -4,7 +4,7 @@ const getTime = async () => {
     .then((response) => response.json())
     .then((data) => {
       const currentTime = data.datetime;
-      const promoStartTime = "2024-01-07T10:00:00.000000-03:00";
+      const promoStartTime = "2024-08-07T10:00:00.000000-03:00";
       const promoEndTime = "2024-08-07T12:00:00.000000-03:00";
 
       if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
@@ -30,7 +30,7 @@ const mountElmentBlock = () => {
   div.innerHTML = `
     <div class="giraFriday_modal slide-top">
       <div class="giraFriday_modal-logo">
-        <img src="/images/cores_logos.webp" />
+        <img src="https://alexandremapa.com/giraflor/cores_logos.webp" />
       </div>
       <p class="giraFriday_modal-text">4 Novas cores do nosos vestido amplo já disponíveis!</p>
       <p class="giraFriday_modal-subtext desktop">Acesso Exclusivo para você - Das 10h às 12h</p>
@@ -48,7 +48,7 @@ const mountElmentBlock = () => {
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (input.value.toLowerCase() === "novas cores") {
+    if (input.value.toLowerCase() === "novascores") {
       localStorage.setItem("gf24-cores", true);
       body.classList.remove("gf24-cores");
       const element = document.querySelector(".giraFriday_overlay");
