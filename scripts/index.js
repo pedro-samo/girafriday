@@ -4,8 +4,8 @@ const getTime = async () => {
     .then((response) => response.json())
     .then((data) => {
       const currentTime = data.datetime;
-      const promoStartTime = "2024-08-07T10:00:00.000000-03:00";
-      const promoEndTime = "2024-08-07T12:00:00.000000-03:00";
+      const promoStartTime = "2024-07-19T12:00:00.000000-03:00";
+      const promoEndTime = "2024-08-19T23:59:59.000000-03:00";
 
       if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
         mountElmentBlock();
@@ -17,24 +17,24 @@ const getTime = async () => {
 };
 
 const mountElmentBlock = () => {
-  const hasKeyOnLocalStorage = localStorage.getItem("gf24-cores");
+  const hasKeyOnLocalStorage = localStorage.getItem("gf24-sale");
 
   if (hasKeyOnLocalStorage === "true") return;
 
   const body = document.querySelector("body");
 
-  body.classList.add("gf24-cores");
+  body.classList.add("gf24-sale");
 
   const div = document.createElement("div");
   div.setAttribute("class", "giraFriday_overlay");
   div.innerHTML = `
     <div class="giraFriday_modal slide-top">
       <div class="giraFriday_modal-logo">
-        <img src="https://alexandremapa.com/giraflor/cores_logos.webp" />
+        <img src="https://alexandremapa.com/giraflor/sale_gira.png" />
       </div>
-      <p class="giraFriday_modal-text">4 Novas cores do nosos vestido amplo já disponíveis!</p>
-      <p class="giraFriday_modal-subtext desktop">Acesso Exclusivo para você - Das 10h às 12h</p>
-      <p class="giraFriday_modal-subtext mobile">Acesso Exclusivo para você <br> Das 10h às 12h</p>
+      <p class="giraFriday_modal-text">Descontos exclusivos para quem está no grupo vip!</p>
+      <p class="giraFriday_modal-text">Não deixe de ter acesso a sale antes de todo mundo!</p>
+      <p class="giraFriday_modal-subtext  ">12 horas de acesso antecipado para você!</p>
       <form>
         <input type="password" placeholder="Senha" />
         <button type="submit">Entrar</button>
@@ -48,9 +48,9 @@ const mountElmentBlock = () => {
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (input.value.toLowerCase() === "novascores") {
-      localStorage.setItem("gf24-cores", true);
-      body.classList.remove("gf24-cores");
+    if (input.value.toLowerCase() === "melhoresdescontos") {
+      localStorage.setItem("gf24-sale", true);
+      body.classList.remove("gf24-sale");
       const element = document.querySelector(".giraFriday_overlay");
       setTimeout(() => {
         element.remove();

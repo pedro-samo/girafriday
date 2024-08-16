@@ -13,7 +13,7 @@ var getTime = /*#__PURE__*/function () {
               return e.json();
             }).then(function (e) {
               e = e.datetime;
-              "2024-08-07T10:00:00.000000-03:00" <= e && e <= "2024-08-07T12:00:00.000000-03:00" && mountElmentBlock();
+              "2024-07-19T12:00:00.000000-03:00" <= e && e <= "2024-08-19T23:59:59.000000-03:00" && mountElmentBlock();
             })["catch"](function (e) {
               console.error("Error fetching time data: " + e);
             });
@@ -28,15 +28,15 @@ var getTime = /*#__PURE__*/function () {
     };
   }(),
   mountElmentBlock = function mountElmentBlock() {
-    var e = localStorage.getItem("gf24-cores");
+    var e = localStorage.getItem("gf24-sale");
     if ("true" !== e) {
       var o = document.querySelector("body"),
-        t = (o.classList.add("gf24-cores"), document.createElement("div")),
-        r = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"https://alexandremapa.com/giraflor/cores_logos.webp\" />\n      </div>\n      <p class=\"giraFriday_modal-text\">4 Novas cores do nosos vestido amplo j\xE1 dispon\xEDveis!</p>\n      <p class=\"giraFriday_modal-subtext desktop\">Acesso Exclusivo para voc\xEA - Das 10h \xE0s 12h</p>\n      <p class=\"giraFriday_modal-subtext mobile\">Acesso Exclusivo para voc\xEA <br> Das 10h \xE0s 12h</p>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>  \n    </div>\n  ", o.appendChild(t), document.querySelector(".giraFriday_modal form")),
+        t = (o.classList.add("gf24-sale"), document.createElement("div")),
+        r = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"https://alexandremapa.com/giraflor/sale_gira.png\" />\n      </div>\n      <p class=\"giraFriday_modal-text\">Descontos exclusivos para quem est\xE1 no grupo vip!</p>\n      <p class=\"giraFriday_modal-text\">N\xE3o deixe de ter acesso a sale antes de todo mundo!</p>\n      <p class=\"giraFriday_modal-subtext  \">12 horas de acesso antecipado para voc\xEA!</p>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>  \n    </div>\n  ", o.appendChild(t), document.querySelector(".giraFriday_modal form")),
         a = document.querySelector(".giraFriday_modal input");
       r.addEventListener("submit", function (e) {
-        if (e.preventDefault(), "novascores" === a.value.toLowerCase()) {
-          localStorage.setItem("gf24-cores", !0), o.classList.remove("gf24-cores");
+        if (e.preventDefault(), "melhoresdescontos" === a.value.toLowerCase()) {
+          localStorage.setItem("gf24-sale", !0), o.classList.remove("gf24-sale");
           var _t = document.querySelector(".giraFriday_overlay");
           setTimeout(function () {
             _t.remove();
