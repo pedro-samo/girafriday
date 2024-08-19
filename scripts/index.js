@@ -4,7 +4,7 @@ const getTime = async () => {
     .then((response) => response.json())
     .then((data) => {
       const currentTime = data.datetime;
-      const promoStartTime = "2024-07-19T12:00:00.000000-03:00";
+      const promoStartTime = "2024-08-19T12:00:00.000000-03:00";
       const promoEndTime = "2024-08-19T23:59:59.000000-03:00";
 
       if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
@@ -33,8 +33,8 @@ const mountElmentBlock = () => {
         <img src="https://alexandremapa.com/giraflor/sale_gira.png" />
       </div>
       <p class="giraFriday_modal-text">Descontos exclusivos para quem está no grupo vip!</p>
-      <p class="giraFriday_modal-text">Não deixe de ter acesso a sale antes de todo mundo!</p>
-      <p class="giraFriday_modal-subtext  ">12 horas de acesso antecipado para você!</p>
+      <p class="giraFriday_modal-text">Não deixe de aproveitar a sale antes de todo mundo!</p>
+      <p class="giraFriday_modal-subtext">12 horas de acesso antecipado para você!</p>
       <form>
         <input type="password" placeholder="Senha" />
         <button type="submit">Entrar</button>
