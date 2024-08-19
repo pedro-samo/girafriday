@@ -13,7 +13,7 @@ var getTime = /*#__PURE__*/function () {
               return e.json();
             }).then(function (e) {
               e = e.datetime;
-              "2024-08-19T12:00:00.000000-03:00" <= e && e <= "2024-08-19T23:59:59.000000-03:00" && mountElmentBlock();
+              "2024-08-19T11:30:00.000000-03:00" <= e && e <= "2024-08-19T23:59:59.000000-03:00" && mountElmentBlock();
             })["catch"](function (e) {
               console.error("Error fetching time data: " + e);
             });

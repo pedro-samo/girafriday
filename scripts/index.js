@@ -4,7 +4,7 @@ const getTime = async () => {
     .then((response) => response.json())
     .then((data) => {
       const currentTime = data.datetime;
-      const promoStartTime = "2024-08-19T12:00:00.000000-03:00";
+      const promoStartTime = "2024-08-19T11:30:00.000000-03:00";
       const promoEndTime = "2024-08-19T23:59:59.000000-03:00";
 
       if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
