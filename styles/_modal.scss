@@ -19,7 +19,7 @@
     justify-content: center;
     flex-direction: column;
     padding: 40px;
-    background-image: url("../images/fundo_giraday.jpg");
+    background-image: url("https://www.alexandremapa.com/giraflor/fundo_giraday.jpg");
     box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.33);
 
     drop &.slide-top {
@@ -100,7 +100,6 @@
       font-size: 18px;
       line-height: 30px;
       margin: 0px;
-      white-space: nowrap;
 
       @media only screen and (max-width: 768px) {
         font-size: 14px;
@@ -172,7 +171,7 @@
       flex-direction: column;
       gap: 15px;
       width: 80%;
-      margin-top: 30px;
+      margin-top: 10px;
 
       input {
         background-color: #a6af94;  
@@ -180,7 +179,7 @@
         height: 45px;
         font-size: 20px;
         color: #f4f2ee;
-        letter-spacing: 6px;
+        letter-spacing: 4px;;
         text-align: center;
         border-radius: 25px;
 
@@ -222,7 +221,7 @@
         text-transform: uppercase;
         border: none;
         cursor: pointer;
-        letter-spacing: 6px;
+        letter-spacing: 4px;;
         border-radius: 25px;
         transition: all 1;
 
@@ -246,7 +245,7 @@
       text-transform: uppercase;
       border: none;
       cursor: pointer;
-      letter-spacing: 6px;
+      letter-spacing: 4px;;
       border-radius: 25px;
       transition: all 1;
       text-align: center;

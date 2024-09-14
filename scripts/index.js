@@ -30,12 +30,11 @@ const mountElmentBlock = () => {
   div.innerHTML = `
     <div class="giraFriday_modal slide-top">
       <div class="giraFriday_modal-logo">
-        <img src="../images/logo_giraday.png" />
+        <img src="https://www.alexandremapa.com/giraflor/logo_giraday.png" />
       </div>
       <p class="giraFriday_modal-text" style="margin: 10px auto"><strong>O site está fechado!</strong></p>
       <p class="giraFriday_modal-text">Hoje é dia de <strong>Promoção exclusiva</strong> para nossas clientes cadastradas!</p>
-      <p class="giraFriday_modal-text">Se você já faz parte do grupo, insira sua senha abaixo</p>
-      <p class="giraFriday_modal-text">e aproveite <strong>até 15% OFF</strong> em todo site.</p>
+      <p class="giraFriday_modal-text">Se você já faz parte do grupo, insira sua senha abaixo e aproveite <strong>até 15% OFF</strong> em todo site.</p>
       <form>
         <input type="password" placeholder="Senha para acesso" />
         <button type="submit">Entrar</button>
