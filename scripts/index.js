@@ -4,8 +4,8 @@ const getTime = async () => {
     .then((response) => response.json())
     .then((data) => {
       const currentTime = data.datetime;
-      const promoStartTime = "2024-08-19T11:30:00.000000-03:00";
-      const promoEndTime = "2024-08-19T23:59:59.000000-03:00";
+      const promoStartTime = "2024-08-15T09:00:00.000000-03:00";
+      const promoEndTime = "2024-09-15T21:00:00.000000-03:00";
 
       if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
         mountElmentBlock();
@@ -17,28 +17,31 @@ const getTime = async () => {
 };
 
 const mountElmentBlock = () => {
-  const hasKeyOnLocalStorage = localStorage.getItem("gf24-sale");
+  const hasKeyOnLocalStorage = localStorage.getItem("gf24-day");
 
   if (hasKeyOnLocalStorage === "true") return;
 
   const body = document.querySelector("body");
 
-  body.classList.add("gf24-sale");
+  body.classList.add("gf24-day");
 
   const div = document.createElement("div");
   div.setAttribute("class", "giraFriday_overlay");
   div.innerHTML = `
     <div class="giraFriday_modal slide-top">
       <div class="giraFriday_modal-logo">
-        <img src="https://alexandremapa.com/giraflor/sale_gira.png" />
+        <img src="../images/logo_giraday.png" />
       </div>
-      <p class="giraFriday_modal-text">Descontos exclusivos para quem está no grupo vip!</p>
-      <p class="giraFriday_modal-text">Não deixe de aproveitar a sale antes de todo mundo!</p>
-      <p class="giraFriday_modal-subtext">12 horas de acesso antecipado para você!</p>
+      <p class="giraFriday_modal-text" style="margin: 10px auto"><strong>O site está fechado!</strong></p>
+      <p class="giraFriday_modal-text">Hoje é dia de <strong>Promoção exclusiva</strong> para nossas clientes cadastradas!</p>
+      <p class="giraFriday_modal-text">Se você já faz parte do grupo, insira sua senha abaixo</p>
+      <p class="giraFriday_modal-text">e aproveite <strong>até 15% OFF</strong> em todo site.</p>
       <form>
-        <input type="password" placeholder="Senha" />
+        <input type="password" placeholder="Senha para acesso" />
         <button type="submit">Entrar</button>
-      <form>  
+      <form>
+      <p class="giraFriday_modal-helptext">Ainda não tem acesso? Clique aqui para se cadastrar e participar do grupo gira</p>
+      <a href="https://rd.giraflorstore.com.br/gira_day" target="_blank"><span>Quero participar</span></a>
     </div>
   `;
   body.appendChild(div);
@@ -48,9 +51,9 @@ const mountElmentBlock = () => {
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (input.value.toLowerCase() === "melhoresdescontos") {
-      localStorage.setItem("gf24-sale", true);
-      body.classList.remove("gf24-sale");
+    if (input.value.toLowerCase() === "melhoresclientes") {
+      localStorage.setItem("gf24-day", true);
+      body.classList.remove("gf24-day");
       const element = document.querySelector(".giraFriday_overlay");
       setTimeout(() => {
         element.remove();

@@ -13,13 +13,13 @@
   }
 
   &_modal {
-    max-width: 850px;
+    max-width: 1000px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 40px 60px;
-    background-image: url("https://alexandremapa.com/giraflor/background_cores.webp");
+    padding: 40px;
+    background-image: url("../images/fundo_giraday.jpg");
     box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.33);
 
     drop &.slide-top {
@@ -39,6 +39,7 @@
       margin: auto 10px;
       text-align: center;
       padding: 30px 10px;
+      max-width: 95vw;
     }
 
     &-logo {
@@ -54,7 +55,7 @@
       }
 
       h2 {
-        font-family: "Hatton";
+        font-family: "Lato";
         text-transform: uppercase;
         margin: 0;
       }
@@ -71,7 +72,7 @@
       }
 
       &_subtitle {
-        font-family: "Chloe" !important;
+        font-family: "Lato" !important;
         font-size: 60px;
         font-weight: 500;
 
@@ -84,36 +85,37 @@
         width: 350px;
 
         @media only screen and (max-width: 768px) {
-          width: 200px;
+          width: 250px;
         }
       }
     }
 
     &-text {
-      font-family: "Now";
+      font-family: "Lato";
       font-weight: 300;
       letter-spacing: 3px;
-      color: #000000;
+      color: #6b5e4b;
       text-transform: uppercase;
       text-align: center;
       font-size: 18px;
       line-height: 30px;
       margin: 0px;
+      white-space: nowrap;
 
       @media only screen and (max-width: 768px) {
         font-size: 14px;
         margin: 0;
-        margin-top: 5px;
         line-height: 1.5;
         letter-spacing: 3px;
+        white-space: wrap;
       }
     }
 
     &-subtext {
-      font-family: "Now";
+      font-family: "Lato";
       font-weight: 700;
       letter-spacing: 5px;
-      color: #000000;
+      color: #6b5e4b;
       text-transform: uppercase;
       text-align: center;
       font-size: 18px;
@@ -145,6 +147,26 @@
       }
     }
 
+    &-helptext{
+      font-family: "Lato";
+      font-weight: 300;
+      letter-spacing: 3px;
+      color: #6b5e4b;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 20px 0 0;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 13px;
+        margin: 0;
+        margin-top: 5px;
+        line-height: 1.5;
+        letter-spacing: 3px;
+      }
+    }
+
     form {
       display: flex;
       flex-direction: column;
@@ -153,12 +175,12 @@
       margin-top: 30px;
 
       input {
-        background-color: #788a97;
+        background-color: #a6af94;  
         border: none;
         height: 45px;
         font-size: 20px;
-        color: #ececea;
-        letter-spacing: 8px;
+        color: #f4f2ee;
+        letter-spacing: 6px;
         text-align: center;
         border-radius: 25px;
 
@@ -169,9 +191,9 @@
 
         &::placeholder {
           font-size: 18px;
-          font-family: "Forum", serif;
+          font-family: "Lato", serif;
           text-transform: uppercase;
-          color: white;
+          color: #f4f2ee;
 
           @media only screen and (max-width: 768px) {
             font-size: 16px;
@@ -180,9 +202,9 @@
 
         &.error {
           background-color: white;
-          font-family: "Forum", serif;
+          font-family: "Lato", serif;
           color: rgb(179, 2, 2);
-          border: 3px solid rgb(179, 2, 2);
+          border: 1px solid rgb(179, 2, 2);
 
           @media only screen and (max-width: 768px) {
             font-size: 15px;
@@ -192,15 +214,15 @@
       }
 
       button {
-        background-color: #788a97;
-        color: #ececea;
+        background-color: #a6af94;
+        color: #f4f2ee;
         font-size: 18px;
-        font-family: "Forum", serif;
+        font-family: "Lato", serif;
         height: 45px;
         text-transform: uppercase;
         border: none;
         cursor: pointer;
-        letter-spacing: 8px;
+        letter-spacing: 6px;
         border-radius: 25px;
         transition: all 1;
 
@@ -210,8 +232,39 @@
         }
 
         &:hover {
-          background-color: #0e0e0e;
+          background-color: #878f79;
         }
+      }
+    }
+
+    a {
+      background-color: #aaa194;
+      color: #f4f2ee;
+      font-size: 18px;
+      font-family: "Lato", serif;
+      height: 45px;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 6px;
+      border-radius: 25px;
+      transition: all 1;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 500px;
+      margin: 0 auto;
+
+      @media only screen and (max-width: 768px) {
+        height: 35px;
+        font-size: 16px;
+        width: 280px;
+      }
+
+      &:hover {
+        background-color: #867e73;
       }
     }
   }

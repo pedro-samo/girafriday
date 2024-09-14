@@ -13,7 +13,7 @@ var getTime = /*#__PURE__*/function () {
               return e.json();
             }).then(function (e) {
               e = e.datetime;
-              "2024-08-19T11:30:00.000000-03:00" <= e && e <= "2024-08-19T23:59:59.000000-03:00" && mountElmentBlock();
+              "2024-08-15T09:00:00.000000-03:00" <= e && e <= "2024-09-15T21:00:00.000000-03:00" && mountElmentBlock();
             })["catch"](function (e) {
               console.error("Error fetching time data: " + e);
             });
@@ -28,28 +28,28 @@ var getTime = /*#__PURE__*/function () {
     };
   }(),
   mountElmentBlock = function mountElmentBlock() {
-    var e = localStorage.getItem("gf24-sale");
+    var e = localStorage.getItem("gf24-day");
     if ("true" !== e) {
-      var o = document.querySelector("body"),
-        t = (o.classList.add("gf24-sale"), document.createElement("div")),
-        r = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"https://alexandremapa.com/giraflor/sale_gira.png\" />\n      </div>\n      <p class=\"giraFriday_modal-text\">Descontos exclusivos para quem est\xE1 no grupo vip!</p>\n      <p class=\"giraFriday_modal-text\">N\xE3o deixe de aproveitar a sale antes de todo mundo!</p>\n      <p class=\"giraFriday_modal-subtext\">12 horas de acesso antecipado para voc\xEA!</p>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>  \n    </div>\n  ", o.appendChild(t), document.querySelector(".giraFriday_modal form")),
-        a = document.querySelector(".giraFriday_modal input");
+      var a = document.querySelector("body"),
+        t = (a.classList.add("gf24-day"), document.createElement("div")),
+        r = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"../images/logo_giraday.png\" />\n      </div>\n      <p class=\"giraFriday_modal-text\" style=\"margin: 10px auto\"><strong>O site est\xE1 fechado!</strong></p>\n      <p class=\"giraFriday_modal-text\">Hoje \xE9 dia de <strong>Promo\xE7\xE3o exclusiva</strong> para nossas clientes cadastradas!</p>\n      <p class=\"giraFriday_modal-text\">Se voc\xEA j\xE1 faz parte do grupo, insira sua senha abaixo</p>\n      <p class=\"giraFriday_modal-text\">e aproveite <strong>at\xE9 15% OFF</strong> em todo site.</p>\n      <form>\n        <input type=\"password\" placeholder=\"Senha para acesso\" />\n        <button type=\"submit\">Entrar</button>\n      <form>\n      <p class=\"giraFriday_modal-helptext\">Ainda n\xE3o tem acesso? Clique aqui para se cadastrar e participar do grupo gira</p>\n      <a href=\"https://rd.giraflorstore.com.br/gira_day\" target=\"_blank\"><span>Quero participar</span></a>\n    </div>\n  ", a.appendChild(t), document.querySelector(".giraFriday_modal form")),
+        o = document.querySelector(".giraFriday_modal input");
       r.addEventListener("submit", function (e) {
-        if (e.preventDefault(), "melhoresdescontos" === a.value.toLowerCase()) {
-          localStorage.setItem("gf24-sale", !0), o.classList.remove("gf24-sale");
+        if (e.preventDefault(), "melhoresclientes" === o.value.toLowerCase()) {
+          localStorage.setItem("gf24-day", !0), a.classList.remove("gf24-day");
           var _t = document.querySelector(".giraFriday_overlay");
           setTimeout(function () {
             _t.remove();
           }, 500);
-        } else a.value = "SENHA INCORRETA", a.setAttribute("type", "text"), a.classList.add("error"), a.disable = !0, setTimeout(function () {
-          a.disable = !1, a.classList.remove("error"), a.value = "", a.setAttribute("type", "password");
+        } else o.value = "SENHA INCORRETA", o.setAttribute("type", "text"), o.classList.add("error"), o.disable = !0, setTimeout(function () {
+          o.disable = !1, o.classList.remove("error"), o.value = "", o.setAttribute("type", "password");
         }, 3e3);
       });
     }
   },
   changeGoBackButton = function changeGoBackButton() {
     if (window.location.pathname.includes("carrinho")) {
-      var o = ".cart-products-list",
+      var a = ".cart-products-list",
         r = function r() {
           var e = document.querySelectorAll(".cart-item-name a");
           if (Array.from(e).some(function (e) {
@@ -59,10 +59,10 @@ var getTime = /*#__PURE__*/function () {
             t.setAttribute("href", "https://www.giraflorstore.com.br/promo-tricot-66a2a31fe987d");
           }
         },
-        e = document.querySelector(o);
+        e = document.querySelector(a);
       if (e) r(e);else {
         var t = new MutationObserver(function (e, t) {
-          document.querySelector(o) && (r(document.querySelector(o)), t.disconnect());
+          document.querySelector(a) && (r(document.querySelector(a)), t.disconnect());
         });
         t.observe(document.body, {
           childList: !0,
