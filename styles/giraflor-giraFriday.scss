@@ -14,12 +14,12 @@ body {
     background-image: url(/images/giraflor_mob.png);
   }
 
-  &.gf24-day {
+  &.gf24-coresaosol {
     overflow-y: hidden;
     pointer-events: none;
   }
 
-  &.gf24-day iframe {
+  &.gf24-coresaosol iframe {
     display: none !important;
   }
 }

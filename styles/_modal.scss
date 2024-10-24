@@ -19,7 +19,7 @@
     justify-content: center;
     flex-direction: column;
     padding: 40px;
-    background-image: url("https://www.alexandremapa.com/giraflor/fundo_giraday.jpg");
+    background-image: url("../images/fundo_cores.jpg");
     box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.33);
 
     drop &.slide-top {
@@ -39,7 +39,7 @@
       margin: auto 10px;
       text-align: center;
       padding: 30px 10px;
-      max-width: 95vw;
+      width: 95vw;
     }
 
     &-logo {
@@ -82,32 +82,40 @@
       }
 
       img {
-        width: 350px;
+        width: 300px;
 
         @media only screen and (max-width: 768px) {
-          width: 250px;
+          width: 200px;
         }
       }
     }
 
     &-text {
-      font-family: "Lato";
-      font-weight: 400;
-      letter-spacing: 3px;
-      color: #6b5e4b;
-      text-transform: uppercase;
-      text-align: center;
-      font-size: 18px;
-      line-height: 30px;
-      margin: 0px;
+
+      max-width: 700px;
+      margin: 10px auto 20px;
 
       @media only screen and (max-width: 768px) {
-        font-size: 14px;
-        margin: 0;
-        line-height: 1.5;
-        letter-spacing: 3px;
-        white-space: wrap;
+        max-width: 300px;
       }
+
+      // font-family: "Lato";
+      // font-weight: 400;
+      // letter-spacing: 3px;
+      // color: #6b5e4b;
+      // text-transform: uppercase;
+      // text-align: center;
+      // font-size: 18px;
+      // line-height: 30px;
+      // margin: 0px;
+
+      // @media only screen and (max-width: 768px) {
+      //   font-size: 14px;
+      //   margin: 0;
+      //   line-height: 1.5;
+      //   letter-spacing: 3px;
+      //   white-space: wrap;
+      // }
     }
 
     &-subtext {
@@ -127,22 +135,6 @@
         margin-top: 10px;
         letter-spacing: 2px;
         line-height: 1.4;
-      }
-
-      &.desktop {
-        display: block;
-
-        @media only screen and (max-width: 768px) {
-          display: none;
-        }
-      }
-
-      &.mobile {
-        display: none;
-
-        @media only screen and (max-width: 768px) {
-          display: block;
-        }
       }
     }
 
@@ -174,11 +166,11 @@
       margin-top: 10px;
 
       input {
-        background-color: #a6af94;  
+        background-color: #fff;  
         border: none;
         height: 45px;
         font-size: 20px;
-        color: #f4f2ee;
+        color: #b7be7b;
         letter-spacing: 4px;;
         text-align: center;
         border-radius: 25px;
@@ -192,7 +184,7 @@
           font-size: 18px;
           font-family: "Lato", serif;
           text-transform: uppercase;
-          color: #f4f2ee;
+          color: #b7be7b;
 
           @media only screen and (max-width: 768px) {
             font-size: 16px;
@@ -213,8 +205,8 @@
       }
 
       button {
-        background-color: #a6af94;
-        color: #f4f2ee;
+        background-color: #fff;
+        color: #b7be7b;
         font-size: 18px;
         font-family: "Lato", serif;
         height: 45px;
@@ -231,7 +223,7 @@
         }
 
         &:hover {
-          background-color: #878f79;
+          background-color: #f2f2f2;
         }
       }
     }
@@ -266,5 +258,21 @@
         background-color: #867e73;
       }
     }
+  }
+}
+
+.desktop {
+  display: block;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+
+  @media only screen and (max-width: 768px) {
+    display: block;
   }
 }
