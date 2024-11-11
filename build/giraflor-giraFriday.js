@@ -6,18 +6,13 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 var getTime = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+      var e, t, o;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-            fetch("https://worldtimeapi.org/api/timezone/America/Sao_Paulo").then(function (e) {
-              return e.json();
-            }).then(function (e) {
-              e = e.datetime;
-              "2024-09-24T12:00:00.000000-03:00" <= e && e <= "2024-10-24T20:00:00.000000-03:00" && (console.log("rodou"), mountElmentBlock());
-            })["catch"](function (e) {
-              console.error("Error fetching time data: " + e);
-            });
-          case 1:
+            e = new Date(), t = new Date("2024-10-12T11:30:00.000000-03:00"), o = new Date("2024-11-12T20:00:00.000000-03:00");
+            t <= e && e <= o && mountElmentBlock();
+          case 2:
           case "end":
             return _context.stop();
         }
@@ -28,43 +23,43 @@ var getTime = /*#__PURE__*/function () {
     };
   }(),
   mountElmentBlock = function mountElmentBlock() {
-    var e = localStorage.getItem("gf24-coresaosol");
+    var e = localStorage.getItem("gf24-9anos");
     if ("true" !== e) {
-      var t = document.querySelector("body"),
-        o = (t.classList.add("gf24-coresaosol"), document.createElement("div")),
-        r = (o.setAttribute("class", "giraFriday_overlay"), o.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"../images/cores-ao-sol_logo.png\" />\n      </div>\n      <img class=\"giraFriday_modal-text desktop\" src=\"../images/acesso_exclusivo.png\" /> \n      <img class=\"giraFriday_modal-text mobile\" src=\"../images/acesso_exclusivo_mobile.png\" /> \n      <form>\n        <input type=\"password\" placeholder=\"Senha para acesso\" />\n        <button type=\"submit\">Entrar</button>\n      <form>\n    </div>\n  ", t.appendChild(o), document.querySelector(".giraFriday_modal form")),
-        a = document.querySelector(".giraFriday_modal input");
-      r.addEventListener("submit", function (e) {
-        if (e.preventDefault(), "melhorcliente" === a.value.toLowerCase()) {
-          localStorage.setItem("gf24-coresaosol", !0), t.classList.remove("gf24-coresaosol");
-          var _o = document.querySelector(".giraFriday_overlay");
+      var o = document.querySelector("body"),
+        t = (o.classList.add("gf24-9anos"), document.createElement("div")),
+        a = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img class=\"desktop\" src=\"../images/9_anos/texto.png\" />\n        <img class=\"mobile\" src=\"../images/9_anos/texto_mobile.png\" />\n      </div>\n      <form>\n        <input type=\"password\" placeholder=\"Senha para acesso\" />\n        <button type=\"submit\">Entrar</button>\n      <form>\n      <img class=\"giraFriday_modal-side right\" src=\"../images/9_anos/9anos.png\"  />\n      <img class=\"giraFriday_modal-side left\" src=\"../images/9_anos/aniversario_gira.jpg\"  />\n    </div>\n  ", o.appendChild(t), document.querySelector(".giraFriday_modal form")),
+        r = document.querySelector(".giraFriday_modal input");
+      a.addEventListener("submit", function (e) {
+        if (e.preventDefault(), "festadagira" === r.value.toLowerCase()) {
+          localStorage.setItem("gf24-9anos", !0), o.classList.remove("gf24-9anos");
+          var _t = document.querySelector(".giraFriday_overlay");
           setTimeout(function () {
-            _o.remove();
+            _t.remove();
           }, 500);
-        } else a.value = "SENHA INCORRETA", a.setAttribute("type", "text"), a.classList.add("error"), a.disable = !0, setTimeout(function () {
-          a.disable = !1, a.classList.remove("error"), a.value = "", a.setAttribute("type", "password");
+        } else r.value = "SENHA INCORRETA", r.setAttribute("type", "text"), r.classList.add("error"), r.disable = !0, setTimeout(function () {
+          r.disable = !1, r.classList.remove("error"), r.value = "", r.setAttribute("type", "password");
         }, 3e3);
       });
     }
   },
   changeGoBackButton = function changeGoBackButton() {
     if (window.location.pathname.includes("carrinho")) {
-      var t = ".cart-products-list",
-        r = function r() {
+      var o = ".cart-products-list",
+        a = function a() {
           var e = document.querySelectorAll(".cart-item-name a");
           if (Array.from(e).some(function (e) {
             return e.href.includes("promo-trico");
           })) {
-            var o = document.querySelector(".row .link");
-            o.setAttribute("href", "https://www.giraflorstore.com.br/promo-tricot-66a2a31fe987d");
+            var t = document.querySelector(".row .link");
+            t.setAttribute("href", "https://www.giraflorstore.com.br/promo-tricot-66a2a31fe987d");
           }
         },
-        e = document.querySelector(t);
-      if (e) r(e);else {
-        var o = new MutationObserver(function (e, o) {
-          document.querySelector(t) && (r(document.querySelector(t)), o.disconnect());
+        e = document.querySelector(o);
+      if (e) a(e);else {
+        var t = new MutationObserver(function (e, t) {
+          document.querySelector(o) && (a(document.querySelector(o)), t.disconnect());
         });
-        o.observe(document.body, {
+        t.observe(document.body, {
           childList: !0,
           subtree: !0
         });

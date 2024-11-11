@@ -18,12 +18,47 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 40px;
-    background-image: url("../images/fundo_cores.jpg");
+    padding: 40px 60px;
+    background-image: url("../images/9_anos/fundo.png");
     box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.33);
+    position: relative;
+    
+    @media only screen and (max-width: 768px) {
+      margin: auto 10px;
+      text-align: center;
+      padding: 10px;
+      width: 95vw;
+    }
 
     drop &.slide-top {
       animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+
+    &-side {
+      position: absolute;
+      width: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @media only screen and (max-width: 768px) {
+        width: 15px;
+      }
+
+      &.right {
+        right: 10;
+
+        @media only screen and (max-width: 768px) {
+          right: 5;
+        }
+      }
+
+      &.left {
+        left: 10;
+
+        @media only screen and (max-width: 768px) {
+          left: 5;
+        }
+      }
     }
 
     @keyframes slide-top {
@@ -35,12 +70,7 @@
       }
     }
 
-    @media only screen and (max-width: 768px) {
-      margin: auto 10px;
-      text-align: center;
-      padding: 30px 10px;
-      width: 95vw;
-    }
+
 
     &-logo {
       display: flex;
@@ -82,10 +112,10 @@
       }
 
       img {
-        width: 300px;
+        width: 600px;
 
         @media only screen and (max-width: 768px) {
-          width: 200px;
+          width: 250px;
         }
       }
     }
@@ -122,7 +152,7 @@
       font-family: "Lato";
       font-weight: 700;
       letter-spacing: 5px;
-      color: #6b5e4b;
+      color: #b74e2d;
       text-transform: uppercase;
       text-align: center;
       font-size: 18px;
@@ -142,7 +172,7 @@
       font-family: "Lato";
       font-weight: 400;
       letter-spacing: 3px;
-      color: #6b5e4b;
+      color: #b74e2d;
       text-transform: uppercase;
       text-align: center;
       font-size: 16px;
@@ -170,7 +200,7 @@
         border: none;
         height: 45px;
         font-size: 20px;
-        color: #b7be7b;
+        color: #b74e2d;
         letter-spacing: 4px;;
         text-align: center;
         border-radius: 25px;
@@ -184,7 +214,7 @@
           font-size: 18px;
           font-family: "Lato", serif;
           text-transform: uppercase;
-          color: #b7be7b;
+          color: #b74e2d;
 
           @media only screen and (max-width: 768px) {
             font-size: 16px;
@@ -206,7 +236,7 @@
 
       button {
         background-color: #fff;
-        color: #b7be7b;
+        color: #b74e2d;
         font-size: 18px;
         font-family: "Lato", serif;
         height: 45px;

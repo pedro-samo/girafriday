@@ -1,44 +1,36 @@
 const getTime = async () => {
-  const url = "https://worldtimeapi.org/api/timezone/America/Sao_Paulo";
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      const currentTime = data.datetime;
-      const promoStartTime = "2024-09-24T12:00:00.000000-03:00";
-      const promoEndTime = "2024-10-24T20:00:00.000000-03:00";
+  const currentTime = new Date();
+  const promoStartTime = new Date("2024-10-12T11:30:00.000000-03:00");
+  const promoEndTime = new Date("2024-11-12T20:00:00.000000-03:00");
 
-      if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
-        console.log('rodou')
-        mountElmentBlock();
-      }
-    })
-    .catch((error) => {
-      console.error(`Error fetching time data: ${error}`);
-    });
+  if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
+    mountElmentBlock();
+  }
 };
 
 const mountElmentBlock = () => {
-  const hasKeyOnLocalStorage = localStorage.getItem("gf24-coresaosol");
+  const hasKeyOnLocalStorage = localStorage.getItem("gf24-9anos");
 
   if (hasKeyOnLocalStorage === "true") return;
 
   const body = document.querySelector("body");
 
-  body.classList.add("gf24-coresaosol");
+  body.classList.add("gf24-9anos");
 
   const div = document.createElement("div");
   div.setAttribute("class", "giraFriday_overlay");
   div.innerHTML = `
     <div class="giraFriday_modal slide-top">
       <div class="giraFriday_modal-logo">
-        <img src="../images/cores-ao-sol_logo.png" />
+        <img class="desktop" src="../images/9_anos/texto.png" />
+        <img class="mobile" src="../images/9_anos/texto_mobile.png" />
       </div>
-      <img class="giraFriday_modal-text desktop" src="../images/acesso_exclusivo.png" /> 
-      <img class="giraFriday_modal-text mobile" src="../images/acesso_exclusivo_mobile.png" /> 
       <form>
         <input type="password" placeholder="Senha para acesso" />
         <button type="submit">Entrar</button>
       <form>
+      <img class="giraFriday_modal-side right" src="../images/9_anos/9anos.png"  />
+      <img class="giraFriday_modal-side left" src="../images/9_anos/aniversario_gira.jpg"  />
     </div>
   `;
   body.appendChild(div);
@@ -48,9 +40,9 @@ const mountElmentBlock = () => {
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (input.value.toLowerCase() === "melhorcliente") {
-      localStorage.setItem("gf24-coresaosol", true);
-      body.classList.remove("gf24-coresaosol");
+    if (input.value.toLowerCase() === "festadagira") {
+      localStorage.setItem("gf24-9anos", true);
+      body.classList.remove("gf24-9anos");
       const element = document.querySelector(".giraFriday_overlay");
       setTimeout(() => {
         element.remove();
