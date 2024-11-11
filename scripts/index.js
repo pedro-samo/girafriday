@@ -22,15 +22,15 @@ const mountElmentBlock = () => {
   div.innerHTML = `
     <div class="giraFriday_modal slide-top">
       <div class="giraFriday_modal-logo">
-        <img class="desktop" src="../images/9_anos/texto.png" />
-        <img class="mobile" src="../images/9_anos/texto_mobile.png" />
+        <img class="desktop" src="https://github.com/pedro-samo/girafriday/blob/c17a78c7e5d0d5d6ac71870c889092ed660128cf/images/9_anos/texto.png?raw=true" />
+        <img class="mobile" src="https://github.com/pedro-samo/girafriday/blob/c17a78c7e5d0d5d6ac71870c889092ed660128cf/images/9_anos/texto_mobile.png?raw=true" />
       </div>
       <form>
         <input type="password" placeholder="Senha para acesso" />
         <button type="submit">Entrar</button>
       <form>
-      <img class="giraFriday_modal-side right" src="../images/9_anos/9anos.png"  />
-      <img class="giraFriday_modal-side left" src="../images/9_anos/aniversario_gira.jpg"  />
+      <img class="giraFriday_modal-side right" src="https://github.com/pedro-samo/girafriday/blob/c17a78c7e5d0d5d6ac71870c889092ed660128cf/images/9_anos/9anos.png?raw=true"  />
+      <img class="giraFriday_modal-side left" src="https://github.com/pedro-samo/girafriday/blob/c17a78c7e5d0d5d6ac71870c889092ed660128cf/images/9_anos/aniversario_gira.jpg?raw=true"  />
     </div>
   `;
   body.appendChild(div);

@@ -19,7 +19,7 @@
     justify-content: center;
     flex-direction: column;
     padding: 40px 60px;
-    background-image: url("../images/9_anos/fundo.png");
+    background-image: url("https://github.com/pedro-samo/girafriday/blob/c17a78c7e5d0d5d6ac71870c889092ed660128cf/images/9_anos/fundo.png?raw=true");
     box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.33);
     position: relative;
     
@@ -194,6 +194,18 @@
       gap: 15px;
       width: 80%;
       margin-top: 10px;
+
+      @media only screen and (max-width: 768px) {
+        margin-top: 0px;
+      }
+      
+      @media only screen and (max-width: 768px) {
+        font-size: 13px;
+        margin: 0;
+        margin-top: 5px;
+        line-height: 1.5;
+        letter-spacing: 3px;
+      }
 
       input {
         background-color: #fff;  

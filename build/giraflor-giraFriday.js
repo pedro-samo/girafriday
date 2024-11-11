@@ -6,12 +6,12 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 var getTime = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-      var e, t, o;
+      var e, t, a;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-            e = new Date(), t = new Date("2024-10-12T11:30:00.000000-03:00"), o = new Date("2024-11-12T20:00:00.000000-03:00");
-            t <= e && e <= o && mountElmentBlock();
+            e = new Date(), t = new Date("2024-10-12T11:30:00.000000-03:00"), a = new Date("2024-11-12T20:00:00.000000-03:00");
+            t <= e && e <= a && mountElmentBlock();
           case 2:
           case "end":
             return _context.stop();
@@ -25,27 +25,27 @@ var getTime = /*#__PURE__*/function () {
   mountElmentBlock = function mountElmentBlock() {
     var e = localStorage.getItem("gf24-9anos");
     if ("true" !== e) {
-      var o = document.querySelector("body"),
-        t = (o.classList.add("gf24-9anos"), document.createElement("div")),
-        a = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img class=\"desktop\" src=\"../images/9_anos/texto.png\" />\n        <img class=\"mobile\" src=\"../images/9_anos/texto_mobile.png\" />\n      </div>\n      <form>\n        <input type=\"password\" placeholder=\"Senha para acesso\" />\n        <button type=\"submit\">Entrar</button>\n      <form>\n      <img class=\"giraFriday_modal-side right\" src=\"../images/9_anos/9anos.png\"  />\n      <img class=\"giraFriday_modal-side left\" src=\"../images/9_anos/aniversario_gira.jpg\"  />\n    </div>\n  ", o.appendChild(t), document.querySelector(".giraFriday_modal form")),
-        r = document.querySelector(".giraFriday_modal input");
-      a.addEventListener("submit", function (e) {
-        if (e.preventDefault(), "festadagira" === r.value.toLowerCase()) {
-          localStorage.setItem("gf24-9anos", !0), o.classList.remove("gf24-9anos");
+      var a = document.querySelector("body"),
+        t = (a.classList.add("gf24-9anos"), document.createElement("div")),
+        r = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img class=\"desktop\" src=\"https://github.com/pedro-samo/girafriday/blob/c17a78c7e5d0d5d6ac71870c889092ed660128cf/images/9_anos/texto.png?raw=true\" />\n        <img class=\"mobile\" src=\"https://github.com/pedro-samo/girafriday/blob/c17a78c7e5d0d5d6ac71870c889092ed660128cf/images/9_anos/texto_mobile.png?raw=true\" />\n      </div>\n      <form>\n        <input type=\"password\" placeholder=\"Senha para acesso\" />\n        <button type=\"submit\">Entrar</button>\n      <form>\n      <img class=\"giraFriday_modal-side right\" src=\"https://github.com/pedro-samo/girafriday/blob/c17a78c7e5d0d5d6ac71870c889092ed660128cf/images/9_anos/9anos.png?raw=true\"  />\n      <img class=\"giraFriday_modal-side left\" src=\"https://github.com/pedro-samo/girafriday/blob/c17a78c7e5d0d5d6ac71870c889092ed660128cf/images/9_anos/aniversario_gira.jpg?raw=true\"  />\n    </div>\n  ", a.appendChild(t), document.querySelector(".giraFriday_modal form")),
+        o = document.querySelector(".giraFriday_modal input");
+      r.addEventListener("submit", function (e) {
+        if (e.preventDefault(), "festadagira" === o.value.toLowerCase()) {
+          localStorage.setItem("gf24-9anos", !0), a.classList.remove("gf24-9anos");
           var _t = document.querySelector(".giraFriday_overlay");
           setTimeout(function () {
             _t.remove();
           }, 500);
-        } else r.value = "SENHA INCORRETA", r.setAttribute("type", "text"), r.classList.add("error"), r.disable = !0, setTimeout(function () {
-          r.disable = !1, r.classList.remove("error"), r.value = "", r.setAttribute("type", "password");
+        } else o.value = "SENHA INCORRETA", o.setAttribute("type", "text"), o.classList.add("error"), o.disable = !0, setTimeout(function () {
+          o.disable = !1, o.classList.remove("error"), o.value = "", o.setAttribute("type", "password");
         }, 3e3);
       });
     }
   },
   changeGoBackButton = function changeGoBackButton() {
     if (window.location.pathname.includes("carrinho")) {
-      var o = ".cart-products-list",
-        a = function a() {
+      var a = ".cart-products-list",
+        r = function r() {
           var e = document.querySelectorAll(".cart-item-name a");
           if (Array.from(e).some(function (e) {
             return e.href.includes("promo-trico");
@@ -54,10 +54,10 @@ var getTime = /*#__PURE__*/function () {
             t.setAttribute("href", "https://www.giraflorstore.com.br/promo-tricot-66a2a31fe987d");
           }
         },
-        e = document.querySelector(o);
-      if (e) a(e);else {
+        e = document.querySelector(a);
+      if (e) r(e);else {
         var t = new MutationObserver(function (e, t) {
-          document.querySelector(o) && (a(document.querySelector(o)), t.disconnect());
+          document.querySelector(a) && (r(document.querySelector(a)), t.disconnect());
         });
         t.observe(document.body, {
           childList: !0,
