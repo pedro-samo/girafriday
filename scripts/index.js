@@ -1,7 +1,7 @@
 const getTime = async () => {
   const currentTime = new Date();
-  const promoStartTime = new Date("2024-11-12T11:30:00.000000-03:00");
-  const promoEndTime = new Date("2024-11-12T20:00:00.000000-03:00");
+  const promoStartTime = new Date("2024-11-22T12:00:00.000000-03:00");
+  const promoEndTime = new Date("2024-11-22T23:59:45.000000-03:00");
 
   if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
     mountElmentBlock();
@@ -9,28 +9,26 @@ const getTime = async () => {
 };
 
 const mountElmentBlock = () => {
-  const hasKeyOnLocalStorage = localStorage.getItem("gf24-9anos");
+  const hasKeyOnLocalStorage = localStorage.getItem("gf24-70off");
 
   if (hasKeyOnLocalStorage === "true") return;
 
   const body = document.querySelector("body");
 
-  body.classList.add("gf24-9anos");
+  body.classList.add("gf24-70off");
 
   const div = document.createElement("div");
   div.setAttribute("class", "giraFriday_overlay");
   div.innerHTML = `
     <div class="giraFriday_modal slide-top">
       <div class="giraFriday_modal-logo">
-        <img class="desktop" src="https://github.com/pedro-samo/girafriday/blob/c17a78c7e5d0d5d6ac71870c889092ed660128cf/images/9_anos/texto.png?raw=true" />
-        <img class="mobile" src="https://github.com/pedro-samo/girafriday/blob/c17a78c7e5d0d5d6ac71870c889092ed660128cf/images/9_anos/texto_mobile.png?raw=true" />
+        <img src="../images/girafriday_70off.png" />
       </div>
+      <p class="giraFriday_modal-text">Minha deusa, se você tem a <strong>senha</strong>, essa é a sua chance de garantir o que realmente quer! <br> Aproveite agora, seus vestidos estão te esperando!</p>
       <form>
         <input type="password" placeholder="Senha para acesso" />
         <button type="submit">Entrar</button>
       <form>
-      <img class="giraFriday_modal-side right" src="https://github.com/pedro-samo/girafriday/blob/c17a78c7e5d0d5d6ac71870c889092ed660128cf/images/9_anos/9anos.png?raw=true"  />
-      <img class="giraFriday_modal-side left" src="https://github.com/pedro-samo/girafriday/blob/c17a78c7e5d0d5d6ac71870c889092ed660128cf/images/9_anos/aniversario_gira.jpg?raw=true"  />
     </div>
   `;
   body.appendChild(div);
@@ -40,9 +38,9 @@ const mountElmentBlock = () => {
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (input.value.toLowerCase() === "festadagira") {
-      localStorage.setItem("gf24-9anos", true);
-      body.classList.remove("gf24-9anos");
+    if (input.value.toLowerCase() === "melhorcliente") {
+      localStorage.setItem("gf24-70off", true);
+      body.classList.remove("gf24-70off");
       const element = document.querySelector(".giraFriday_overlay");
       setTimeout(() => {
         element.remove();
@@ -106,21 +104,3 @@ window.addEventListener("DOMContentLoaded", () => {
   getTime();
   // changeGoBackButton();
 });
-
-
-// div.innerHTML = `
-// <div class="giraFriday_modal slide-top">
-//   <div class="giraFriday_modal-logo">
-//     <img src="../images/cores-ao-sol_logo.png" />
-//   </div>
-//   <p class="giraFriday_modal-text" style="margin: 10px auto"><strong>O site está fechado!</strong></p>
-//   <p class="giraFriday_modal-text">Hoje é dia de <strong>Promoção exclusiva</strong> para nossas clientes cadastradas!</p>
-//   <p class="giraFriday_modal-text">Se você já faz parte do grupo, insira sua senha abaixo e aproveite <strong>até 15% OFF</strong> em todo site.</p>
-//   <form>
-//     <input type="password" placeholder="Senha para acesso" />
-//     <button type="submit">Entrar</button>
-//   <form>
-//   <p class="giraFriday_modal-helptext">Ainda não tem acesso? Clique aqui para se cadastrar e participar do grupo gira</p>
-//   <a href="https://rd.giraflorstore.com.br/gira_day" target="_blank"><span>Quero participar</span></a>
-// </div>
-// `;
