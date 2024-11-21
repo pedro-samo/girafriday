@@ -22,7 +22,7 @@ const mountElmentBlock = () => {
   div.innerHTML = `
     <div class="giraFriday_modal slide-top">
       <div class="giraFriday_modal-logo">
-        <img src="../images/girafriday_70off.png" />
+        <img src="https://raw.githubusercontent.com/pedro-samo/girafriday/refs/heads/master/images/girafriday_70off.png" />
       </div>
       <p class="giraFriday_modal-text">Minha deusa, se você tem a <strong>senha</strong>, essa é a sua chance de garantir o que realmente quer! <br> Aproveite agora, seus vestidos estão te esperando!</p>
       <form>
