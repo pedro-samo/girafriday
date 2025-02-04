@@ -1,7 +1,7 @@
 const getTime = async () => {
   const currentTime = new Date();
-  const promoStartTime = new Date("2024-11-22T11:30:00.000000-03:00");
-  const promoEndTime = new Date("2024-11-22T23:59:45.000000-03:00");
+  const promoStartTime = new Date("2025-01-07T12:00:00.000000-03:00");
+  const promoEndTime = new Date("2025-02-07T15:00:00.000000-03:00");
 
   if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
     mountElmentBlock();
@@ -9,29 +9,32 @@ const getTime = async () => {
 };
 
 const mountElmentBlock = () => {
-  const hasKeyOnLocalStorage = localStorage.getItem("gf24-70off");
+  const hasKeyOnLocalStorage = localStorage.getItem("gf24-alcinhas");
 
   if (hasKeyOnLocalStorage === "true") return;
 
   const body = document.querySelector("body");
 
-  body.classList.add("gf24-70off");
+  body.classList.add("gf24-alcinhas");
 
   const div = document.createElement("div");
   div.setAttribute("class", "giraFriday_overlay");
   div.innerHTML = `
     <div class="giraFriday_modal slide-top">
       <div class="giraFriday_modal-logo">
-        <img src="https://raw.githubusercontent.com/pedro-samo/girafriday/refs/heads/master/images/girafriday_70off.png" />
+        <p>Você chegou até aqui porque faz parte de um grupo especial! 
+          <strong> As três cores mais desejadas do Amplo Alcinha estão disponíveis agora, antes da abertura para o público geral.</strong> 
+        </p>
+        <img class="giraFriday_modal-logo-line" src="../images/alcinhas/alcinhas_linha.png" />
+        <img class="giraFriday_modal-logo-alcinhas" src="../images/alcinhas/alcinhas_logo.png" />
       </div>
-      <p class="giraFriday_modal-text">Minha deusa, se você tem a <strong>senha</strong>, essa é a sua chance de garantir o que realmente quer! <br> Aproveite agora, seus vestidos estão te esperando!</p>
       <form>
         <input type="password" placeholder="Senha para acesso" />
         <button type="submit">Entrar</button>
       <form>
     </div>
   `;
-  body.appendChild(div);
+  body.appendChild(div);1
 
   const form = document.querySelector(".giraFriday_modal form");
   const input = document.querySelector(".giraFriday_modal input");
@@ -39,8 +42,8 @@ const mountElmentBlock = () => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (input.value.toLowerCase() === "melhorcliente") {
-      localStorage.setItem("gf24-70off", true);
-      body.classList.remove("gf24-70off");
+      localStorage.setItem("gf24-alcinhas", true);
+      body.classList.remove("gf24-alcinhas");
       const element = document.querySelector(".giraFriday_overlay");
       setTimeout(() => {
         element.remove();
@@ -60,47 +63,49 @@ const mountElmentBlock = () => {
   });
 };
 
-const changeGoBackButton = () => {
-  const isCheckout = window.location.pathname.includes("carrinho");
-  if (!isCheckout) return;
+// const changeGoBackButton = () => {
+//   const isCheckout = window.location.pathname.includes("carrinho");
+//   if (!isCheckout) return;
 
-  const waitForElement = (selector, callback) => {
-    const element = document.querySelector(selector);
-    if (element) {
-      callback(element);
-    } else {
-      const observer = new MutationObserver((mutations, observer) => {
-        if (document.querySelector(selector)) {
-          callback(document.querySelector(selector));
-          observer.disconnect();
-        }
-      });
+//   const waitForElement = (selector, callback) => {
+//     const element = document.querySelector(selector);
+//     if (element) {
+//       callback(element);
+//     } else {
+//       const observer = new MutationObserver((mutations, observer) => {
+//         if (document.querySelector(selector)) {
+//           callback(document.querySelector(selector));
+//           observer.disconnect();
+//         }
+//       });
 
-      observer.observe(document.body, {
-        childList: true,
-        subtree: true,
-      });
-    }
-  };
+//       observer.observe(document.body, {
+//         childList: true,
+//         subtree: true,
+//       });
+//     }
+//   };
 
-  waitForElement(".cart-products-list", () => {
-    const itensLink = document.querySelectorAll(".cart-item-name a");
+//   waitForElement(".cart-products-list", () => {
+//     const itensLink = document.querySelectorAll(".cart-item-name a");
 
-    const hasPromotionalItem = Array.from(itensLink).some((item) => {
-      return item.href.includes("promo-trico");
-    });
+//     const hasPromotionalItem = Array.from(itensLink).some((item) => {
+//       return item.href.includes("promo-trico");
+//     });
 
-    if (!hasPromotionalItem) return;
+//     if (!hasPromotionalItem) return;
 
-    const goBackButton = document.querySelector(".row .link");
-    goBackButton.setAttribute(
-      "href",
-      "https://www.giraflorstore.com.br/promo-tricot-66a2a31fe987d"
-    );
-  });
-};
+//     const goBackButton = document.querySelector(".row .link");
+//     goBackButton.setAttribute(
+//       "href",
+//       "https://www.giraflorstore.com.br/promo-tricot-66a2a31fe987d"
+//     );
+//   });
+// };
 
 window.addEventListener("DOMContentLoaded", () => {
+  const IS_PRODUCTION = window.location.hostname === "www.giraflorstore.com.br";
+  if (IS_PRODUCTION) return;
   getTime();
   // changeGoBackButton();
 });

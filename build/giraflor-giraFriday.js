@@ -6,12 +6,12 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 var getTime = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-      var e, t, r;
+      var e, a, t;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-            e = new Date(), t = new Date("2024-11-22T11:30:00.000000-03:00"), r = new Date("2024-11-22T23:59:45.000000-03:00");
-            t <= e && e <= r && mountElmentBlock();
+            e = new Date(), a = new Date("2025-01-07T12:00:00.000000-03:00"), t = new Date("2025-02-07T15:00:00.000000-03:00");
+            a <= e && e <= t && mountElmentBlock();
           case 2:
           case "end":
             return _context.stop();
@@ -23,49 +23,25 @@ var getTime = /*#__PURE__*/function () {
     };
   }(),
   mountElmentBlock = function mountElmentBlock() {
-    var e = localStorage.getItem("gf24-70off");
+    var e = localStorage.getItem("gf24-alcinhas");
     if ("true" !== e) {
-      var r = document.querySelector("body"),
-        t = (r.classList.add("gf24-70off"), document.createElement("div")),
-        o = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"https://raw.githubusercontent.com/pedro-samo/girafriday/refs/heads/master/images/girafriday_70off.png\" />\n      </div>\n      <p class=\"giraFriday_modal-text\">Minha deusa, se voc\xEA tem a <strong>senha</strong>, essa \xE9 a sua chance de garantir o que realmente quer! <br> Aproveite agora, seus vestidos est\xE3o te esperando!</p>\n      <form>\n        <input type=\"password\" placeholder=\"Senha para acesso\" />\n        <button type=\"submit\">Entrar</button>\n      <form>\n    </div>\n  ", r.appendChild(t), document.querySelector(".giraFriday_modal form")),
-        a = document.querySelector(".giraFriday_modal input");
+      var t = document.querySelector("body"),
+        a = (t.classList.add("gf24-alcinhas"), document.createElement("div")),
+        o = (a.setAttribute("class", "giraFriday_overlay"), a.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <p>Voc\xEA chegou at\xE9 aqui porque faz parte de um grupo especial! \n          <strong> As tr\xEAs cores mais desejadas do Amplo Alcinha est\xE3o dispon\xEDveis agora, antes da abertura para o p\xFAblico geral.</strong> \n        </p>\n        <img class=\"giraFriday_modal-logo-line\" src=\"../images/alcinhas/alcinhas_linha.png\" />\n        <img class=\"giraFriday_modal-logo-alcinhas\" src=\"../images/alcinhas/alcinhas_logo.png\" />\n      </div>\n      <form>\n        <input type=\"password\" placeholder=\"Senha para acesso\" />\n        <button type=\"submit\">Entrar</button>\n      <form>\n    </div>\n  ", t.appendChild(a), document.querySelector(".giraFriday_modal form")),
+        r = document.querySelector(".giraFriday_modal input");
       o.addEventListener("submit", function (e) {
-        if (e.preventDefault(), "melhorcliente" === a.value.toLowerCase()) {
-          localStorage.setItem("gf24-70off", !0), r.classList.remove("gf24-70off");
-          var _t = document.querySelector(".giraFriday_overlay");
+        if (e.preventDefault(), "melhorcliente" === r.value.toLowerCase()) {
+          localStorage.setItem("gf24-alcinhas", !0), t.classList.remove("gf24-alcinhas");
+          var _a = document.querySelector(".giraFriday_overlay");
           setTimeout(function () {
-            _t.remove();
+            _a.remove();
           }, 500);
-        } else a.value = "SENHA INCORRETA", a.setAttribute("type", "text"), a.classList.add("error"), a.disable = !0, setTimeout(function () {
-          a.disable = !1, a.classList.remove("error"), a.value = "", a.setAttribute("type", "password");
+        } else r.value = "SENHA INCORRETA", r.setAttribute("type", "text"), r.classList.add("error"), r.disable = !0, setTimeout(function () {
+          r.disable = !1, r.classList.remove("error"), r.value = "", r.setAttribute("type", "password");
         }, 3e3);
       });
     }
-  },
-  changeGoBackButton = function changeGoBackButton() {
-    if (window.location.pathname.includes("carrinho")) {
-      var r = ".cart-products-list",
-        o = function o() {
-          var e = document.querySelectorAll(".cart-item-name a");
-          if (Array.from(e).some(function (e) {
-            return e.href.includes("promo-trico");
-          })) {
-            var t = document.querySelector(".row .link");
-            t.setAttribute("href", "https://www.giraflorstore.com.br/promo-tricot-66a2a31fe987d");
-          }
-        },
-        e = document.querySelector(r);
-      if (e) o(e);else {
-        var t = new MutationObserver(function (e, t) {
-          document.querySelector(r) && (o(document.querySelector(r)), t.disconnect());
-        });
-        t.observe(document.body, {
-          childList: !0,
-          subtree: !0
-        });
-      }
-    }
   };
 window.addEventListener("DOMContentLoaded", function () {
-  getTime();
+  "www.giraflorstore.com.br" !== window.location.hostname && getTime();
 });
