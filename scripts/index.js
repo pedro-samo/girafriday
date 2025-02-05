@@ -1,6 +1,6 @@
 const getTime = async () => {
   const currentTime = new Date();
-  const promoStartTime = new Date("2025-02-07T12:00:00.000000-03:00");
+  const promoStartTime = new Date("2025-02-07T11:30:00.000000-03:00");
   const promoEndTime = new Date("2025-02-07T15:00:00.000000-03:00");
 
   if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
