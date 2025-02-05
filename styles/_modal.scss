@@ -18,7 +18,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 40px 60px;
+    padding: 30px 60px;
     background-image: url("../images/alcinhas/alcinhas_fundo.jpg");
     box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.33);
     position: relative;
@@ -34,33 +34,6 @@
       animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     }
 
-    &-side {
-      position: absolute;
-      width: 25px;
-      top: 50%;
-      transform: translateY(-50%);
-
-      @media only screen and (max-width: 768px) {
-        width: 15px;
-      }
-
-      &.right {
-        right: 10px;
-
-        @media only screen and (max-width: 768px) {
-          right: 5px;
-        }
-      }
-
-      &.left {
-        left: 10px;
-
-        @media only screen and (max-width: 768px) {
-          left: 5px;
-        }
-      }
-    }
-
     @keyframes slide-top {
       0% {
         transform: translateY(100px);
@@ -70,58 +43,20 @@
       }
     }
 
-
-
     &-logo {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       flex-direction: row;
       position: relative;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
 
       @media only screen and (max-width: 768px) {
-        margin-bottom: 0px !important;
-      }
-
-      p {
-        color: #61533f;
-        font-size: 30px;
-      }
-
-      h2 {
-        font-family: "Lato";
-        text-transform: uppercase;
-        margin: 0;
-      }
-
-      &_title {
-        font-size: 90px;
-        margin-bottom: 40px !important;
-        font-weight: 100;
-
-        @media only screen and (max-width: 768px) {
-          font-size: 50px;
-          margin-bottom: 20px !important;
-        }
-      }
-
-      &_subtitle {
-        font-family: "Lato" !important;
-        font-size: 60px;
-        font-weight: 500;
-
-        @media only screen and (max-width: 768px) {
-          font-size: 35px;
-        }
+        margin-bottom: 10px;
       }
 
       img {
-        width: 200px;
-
-        @media only screen and (max-width: 768px) {
-          width: 160px;
-        }
+        width: 100%;
       }
     }
 
@@ -186,9 +121,9 @@
     form {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 10px;
       width: 80%;
-      margin-top: 10px;
+      max-width: 400px;
 
       @media only screen and (max-width: 768px) {
         margin-top: 0px;
@@ -271,37 +206,6 @@
         &:hover {
           background-color: #978367;
         }
-      }
-    }
-
-    a {
-      background-color: #aaa194;
-      color: #f4f2ee;
-      font-size: 18px;
-      font-family: "Lato", serif;
-      height: 45px;
-      text-transform: uppercase;
-      border: none;
-      cursor: pointer;
-      letter-spacing: 4px;;
-      border-radius: 25px;
-      transition: all 1;
-      text-align: center;
-      text-decoration: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 500px;
-      margin: 0 auto;
-
-      @media only screen and (max-width: 768px) {
-        height: 35px;
-        font-size: 16px;
-        width: 280px;
-      }
-
-      &:hover {
-        background-color: #867e73;
       }
     }
   }

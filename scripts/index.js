@@ -22,14 +22,11 @@ const mountElmentBlock = () => {
   div.innerHTML = `
     <div class="giraFriday_modal slide-top">
       <div class="giraFriday_modal-logo">
-        <p>Você chegou até aqui porque faz parte de um grupo especial! 
-          <strong> As três cores mais desejadas do Amplo Alcinha estão disponíveis agora, antes da abertura para o público geral.</strong> 
-        </p>
-        <img class="giraFriday_modal-logo-line" src="../images/alcinhas/alcinhas_linha.png" />
-        <img class="giraFriday_modal-logo-alcinhas" src="../images/alcinhas/alcinhas_logo.png" />
+        <img class="desktop" src="../images/alcinhas/alcinhas_content.png" alt="Giraflor Store" />
+        <img class="mobile" src="../images/alcinhas/alcinhas_content_mobile.png" alt="Giraflor Store" />
       </div>
       <form>
-        <input type="password" placeholder="Senha para acesso" />
+        <input type="password" placeholder="Senha" />
         <button type="submit">Entrar</button>
       <form>
     </div>
@@ -41,7 +38,7 @@ const mountElmentBlock = () => {
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (input.value.toLowerCase() === "melhorcliente") {
+    if (input.value.toLowerCase() === "giralovers") {
       localStorage.setItem("gf24-alcinhas", true);
       body.classList.remove("gf24-alcinhas");
       const element = document.querySelector(".giraFriday_overlay");

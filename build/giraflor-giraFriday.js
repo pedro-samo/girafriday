@@ -6,12 +6,12 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 var getTime = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-      var e, a, t;
+      var e, t, a;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-            e = new Date(), a = new Date("2025-01-07T12:00:00.000000-03:00"), t = new Date("2025-02-07T15:00:00.000000-03:00");
-            a <= e && e <= t && mountElmentBlock();
+            e = new Date(), t = new Date("2025-01-07T12:00:00.000000-03:00"), a = new Date("2025-02-07T15:00:00.000000-03:00");
+            t <= e && e <= a && mountElmentBlock();
           case 2:
           case "end":
             return _context.stop();
@@ -25,16 +25,16 @@ var getTime = /*#__PURE__*/function () {
   mountElmentBlock = function mountElmentBlock() {
     var e = localStorage.getItem("gf24-alcinhas");
     if ("true" !== e) {
-      var t = document.querySelector("body"),
-        a = (t.classList.add("gf24-alcinhas"), document.createElement("div")),
-        o = (a.setAttribute("class", "giraFriday_overlay"), a.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <p>Voc\xEA chegou at\xE9 aqui porque faz parte de um grupo especial! \n          <strong> As tr\xEAs cores mais desejadas do Amplo Alcinha est\xE3o dispon\xEDveis agora, antes da abertura para o p\xFAblico geral.</strong> \n        </p>\n        <img class=\"giraFriday_modal-logo-line\" src=\"../images/alcinhas/alcinhas_linha.png\" />\n        <img class=\"giraFriday_modal-logo-alcinhas\" src=\"../images/alcinhas/alcinhas_logo.png\" />\n      </div>\n      <form>\n        <input type=\"password\" placeholder=\"Senha para acesso\" />\n        <button type=\"submit\">Entrar</button>\n      <form>\n    </div>\n  ", t.appendChild(a), document.querySelector(".giraFriday_modal form")),
+      var a = document.querySelector("body"),
+        t = (a.classList.add("gf24-alcinhas"), document.createElement("div")),
+        o = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img class=\"desktop\" src=\"../images/alcinhas/alcinhas_content.png\" alt=\"Giraflor Store\" />\n        <img class=\"mobile\" src=\"../images/alcinhas/alcinhas_content_mobile.png\" alt=\"Giraflor Store\" />\n      </div>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>\n    </div>\n  ", a.appendChild(t), document.querySelector(".giraFriday_modal form")),
         r = document.querySelector(".giraFriday_modal input");
       o.addEventListener("submit", function (e) {
-        if (e.preventDefault(), "melhorcliente" === r.value.toLowerCase()) {
-          localStorage.setItem("gf24-alcinhas", !0), t.classList.remove("gf24-alcinhas");
-          var _a = document.querySelector(".giraFriday_overlay");
+        if (e.preventDefault(), "giralovers" === r.value.toLowerCase()) {
+          localStorage.setItem("gf24-alcinhas", !0), a.classList.remove("gf24-alcinhas");
+          var _t = document.querySelector(".giraFriday_overlay");
           setTimeout(function () {
-            _a.remove();
+            _t.remove();
           }, 500);
         } else r.value = "SENHA INCORRETA", r.setAttribute("type", "text"), r.classList.add("error"), r.disable = !0, setTimeout(function () {
           r.disable = !1, r.classList.remove("error"), r.value = "", r.setAttribute("type", "password");
