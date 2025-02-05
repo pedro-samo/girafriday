@@ -1,6 +1,6 @@
 const getTime = async () => {
   const currentTime = new Date();
-  const promoStartTime = new Date("2025-01-07T12:00:00.000000-03:00");
+  const promoStartTime = new Date("2025-02-07T12:00:00.000000-03:00");
   const promoEndTime = new Date("2025-02-07T15:00:00.000000-03:00");
 
   if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
@@ -22,8 +22,8 @@ const mountElmentBlock = () => {
   div.innerHTML = `
     <div class="giraFriday_modal slide-top">
       <div class="giraFriday_modal-logo">
-        <img class="desktop" src="../images/alcinhas/alcinhas_content.png" alt="Giraflor Store" />
-        <img class="mobile" src="../images/alcinhas/alcinhas_content_mobile.png" alt="Giraflor Store" />
+        <img class="desktop" src="https://raw.githubusercontent.com/pedro-samo/girafriday/refs/heads/master/images/alcinhas/alcinhas_content.png" alt="Giraflor Store" />
+        <img class="mobile" src="https://raw.githubusercontent.com/pedro-samo/girafriday/refs/heads/master/images/alcinhas/alcinhas_content_mobile.png" alt="Giraflor Store" />
       </div>
       <form>
         <input type="password" placeholder="Senha" />
@@ -101,8 +101,8 @@ const mountElmentBlock = () => {
 // };
 
 window.addEventListener("DOMContentLoaded", () => {
-  const IS_PRODUCTION = window.location.hostname === "www.giraflorstore.com.br";
-  if (IS_PRODUCTION) return;
+  // const IS_PRODUCTION = window.location.hostname === "www.giraflorstore.com.br";
+  // if (IS_PRODUCTION) return;
   getTime();
   // changeGoBackButton();
 });
