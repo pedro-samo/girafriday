@@ -23,7 +23,7 @@ const mountElmentBlock = () => {
     <div class="giraFriday_modal slide-top">
       <div class="giraFriday_modal-logo">
         <img src="https://raw.githubusercontent.com/pedro-samo/girafriday/refs/heads/master/images/semanacliente_logo.png" alt="Giraflor Store" />
-        <p>Acesso exclusivo, <br> <span> descontos maiores </span> somente das 10h às 22h</p>
+        <p class="giraFriday_modal-logo-text">Acesso exclusivo, <br> <span> descontos maiores </span> somente das 10h às 22h</p>
       </div>
       <form>
         <input type="password" placeholder="Senha" />
