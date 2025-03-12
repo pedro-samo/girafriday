@@ -27,7 +27,7 @@ var getTime = /*#__PURE__*/function () {
     if ("true" !== e) {
       var a = document.querySelector("body"),
         t = (a.classList.add("gf25-cliente"), document.createElement("div")),
-        r = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"../images/semanacliente_logo.png\" alt=\"Giraflor Store\" />\n        <p>Acesso exclusivo, <br> <span> descontos maiores </span> somente das 10h \xE0s 22h</p>\n      </div>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>\n    </div>\n  ", a.appendChild(t), document.querySelector(".giraFriday_modal form")),
+        r = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"https://raw.githubusercontent.com/pedro-samo/girafriday/refs/heads/master/images/semanacliente_logo.png\" alt=\"Giraflor Store\" />\n        <p>Acesso exclusivo, <br> <span> descontos maiores </span> somente das 10h \xE0s 22h</p>\n      </div>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>\n    </div>\n  ", a.appendChild(t), document.querySelector(".giraFriday_modal form")),
         o = document.querySelector(".giraFriday_modal input");
       r.addEventListener("submit", function (e) {
         if (e.preventDefault(), "girasecreta" === o.value.toLowerCase()) {
