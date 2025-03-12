@@ -10,7 +10,7 @@ var getTime = /*#__PURE__*/function () {
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-            e = new Date(), t = new Date("2025-03-13T10:00:00.000000-03:00"), a = new Date("2025-03-13T20:00:00.000000-03:00");
+            e = new Date(), t = new Date("2025-02-13T10:00:00.000000-03:00"), a = new Date("2025-03-13T20:00:00.000000-03:00");
             t <= e && e <= a && mountElmentBlock();
           case 2:
           case "end":
@@ -27,7 +27,7 @@ var getTime = /*#__PURE__*/function () {
     if ("true" !== e) {
       var a = document.querySelector("body"),
         t = (a.classList.add("gf25-cliente"), document.createElement("div")),
-        r = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"https://raw.githubusercontent.com/pedro-samo/girafriday/refs/heads/master/images/semanacliente_logo.png\" alt=\"Giraflor Store\" />\n        <p class=\"giraFriday_modal-logo-text\">Acesso exclusivo, <br> <span> descontos maiores </span> somente das 10h \xE0s 22h</p>\n      </div>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>\n    </div>\n  ", a.appendChild(t), document.querySelector(".giraFriday_modal form")),
+        r = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"https://raw.githubusercontent.com/pedro-samo/girafriday/refs/heads/master/images/semanacliente_logo.png\" alt=\"Giraflor Store\" />\n        <div class=\"giraFriday_modal-logo-text\"> <p> Acesso exclusivo, <br> <span> descontos maiores </span> somente das 10h \xE0s 22h </p></div>\n      </div>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>\n    </div>\n  ", a.appendChild(t), document.querySelector(".giraFriday_modal form")),
         o = document.querySelector(".giraFriday_modal input");
       r.addEventListener("submit", function (e) {
         if (e.preventDefault(), "girasecreta" === o.value.toLowerCase()) {
