@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Forum&display=swap');
+
 .giraFriday {
   &_overlay {
     width: 100vw;
@@ -19,7 +21,7 @@
     justify-content: center;
     flex-direction: column;
     padding: 30px 60px;
-    background-image: url("https://raw.githubusercontent.com/pedro-samo/girafriday/refs/heads/master/images/alcinhas/alcinhas_fundo.jpg");
+    background-image: url("../images/semanacliente_fundo.png");
     box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.33);
     position: relative;
     
@@ -47,16 +49,37 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-direction: row;
+      flex-direction: column;
       position: relative;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
 
       @media only screen and (max-width: 768px) {
         margin-bottom: 10px;
       }
 
       img {
-        width: 100%;
+        max-width: 400px;
+
+        @media only screen and (max-width: 768px) {
+          max-width: 300px;
+        }
+      }
+
+      p{
+        text-transform: uppercase;
+        font-family: "Barlow", sans-serif;
+        font-weight: 300;
+        font-size: 28px;
+        letter-spacing: 1.2;
+        text-align: center;
+
+        @media only screen and (max-width: 768px) {
+          font-size: 22px;
+        }
+
+        span {
+          text-decoration: underline;
+        }
       }
     }
 
@@ -75,6 +98,7 @@
       @media only screen and (max-width: 768px) {
         font-size: 16px;
         line-height: 1.5;
+       
       }
     }
 
@@ -138,11 +162,11 @@
       }
 
       input {
-        background-color: #776a58;  
+        background-color: #CB6B97;  
         border: none;
         height: 45px;
         font-size: 18px;
-        color: #fff;
+        color: #000;
         letter-spacing: 4px;;
         text-align: center;
         border-radius: 25px;
@@ -161,7 +185,7 @@
           font-weight: 400;
           font-style: normal;
           text-transform: uppercase;
-          color: #fff;
+          color: #000;
 
           @media only screen and (max-width: 768px) {
             font-size: 16px;
@@ -184,8 +208,8 @@
       }
 
       button {
-        background-color: #776a58;
-        color: #fff;
+        background-color: #CB6B97;
+        color: #000;
         font-size: 18px;
         font-family: "Forum", serif;
         font-weight: 400;

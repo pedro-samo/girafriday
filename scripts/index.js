@@ -1,7 +1,7 @@
 const getTime = async () => {
   const currentTime = new Date();
-  const promoStartTime = new Date("2025-02-07T10:00:00.000000-03:00");
-  const promoEndTime = new Date("2025-02-07T15:00:00.000000-03:00");
+  const promoStartTime = new Date("2025-03-13T10:00:00.000000-03:00");
+  const promoEndTime = new Date("2025-03-13T20:00:00.000000-03:00");
 
   if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
     mountElmentBlock();
@@ -9,21 +9,21 @@ const getTime = async () => {
 };
 
 const mountElmentBlock = () => {
-  const hasKeyOnLocalStorage = localStorage.getItem("gf24-alcinhas");
+  const hasKeyOnLocalStorage = localStorage.getItem("gf25-cliente");
 
   if (hasKeyOnLocalStorage === "true") return;
 
   const body = document.querySelector("body");
 
-  body.classList.add("gf24-alcinhas");
+  body.classList.add("gf25-cliente");
 
   const div = document.createElement("div");
   div.setAttribute("class", "giraFriday_overlay");
   div.innerHTML = `
     <div class="giraFriday_modal slide-top">
       <div class="giraFriday_modal-logo">
-        <img class="desktop" src="https://raw.githubusercontent.com/pedro-samo/girafriday/refs/heads/master/images/alcinhas/alcinhas_content.png" alt="Giraflor Store" />
-        <img class="mobile" src="https://raw.githubusercontent.com/pedro-samo/girafriday/refs/heads/master/images/alcinhas/alcinhas_content_mobile.png" alt="Giraflor Store" />
+        <img src="../images/semanacliente_logo.png" alt="Giraflor Store" />
+        <p>Acesso exclusivo, <br> <span> descontos maiores </span> somente das 10h às 22h</p>
       </div>
       <form>
         <input type="password" placeholder="Senha" />
@@ -38,9 +38,9 @@ const mountElmentBlock = () => {
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (input.value.toLowerCase() === "giralovers") {
-      localStorage.setItem("gf24-alcinhas", true);
-      body.classList.remove("gf24-alcinhas");
+    if (input.value.toLowerCase() === "girasecreta") {
+      localStorage.setItem("gf25-cliente", true);
+      body.classList.remove("gf25-cliente");
       const element = document.querySelector(".giraFriday_overlay");
       setTimeout(() => {
         element.remove();

@@ -10,7 +10,7 @@ var getTime = /*#__PURE__*/function () {
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-            e = new Date(), t = new Date("2025-02-07T10:00:00.000000-03:00"), a = new Date("2025-02-07T15:00:00.000000-03:00");
+            e = new Date(), t = new Date("2025-03-13T10:00:00.000000-03:00"), a = new Date("2025-03-13T20:00:00.000000-03:00");
             t <= e && e <= a && mountElmentBlock();
           case 2:
           case "end":
@@ -23,21 +23,21 @@ var getTime = /*#__PURE__*/function () {
     };
   }(),
   mountElmentBlock = function mountElmentBlock() {
-    var e = localStorage.getItem("gf24-alcinhas");
+    var e = localStorage.getItem("gf25-cliente");
     if ("true" !== e) {
       var a = document.querySelector("body"),
-        t = (a.classList.add("gf24-alcinhas"), document.createElement("div")),
-        r = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img class=\"desktop\" src=\"https://raw.githubusercontent.com/pedro-samo/girafriday/refs/heads/master/images/alcinhas/alcinhas_content.png\" alt=\"Giraflor Store\" />\n        <img class=\"mobile\" src=\"https://raw.githubusercontent.com/pedro-samo/girafriday/refs/heads/master/images/alcinhas/alcinhas_content_mobile.png\" alt=\"Giraflor Store\" />\n      </div>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>\n    </div>\n  ", a.appendChild(t), document.querySelector(".giraFriday_modal form")),
-        s = document.querySelector(".giraFriday_modal input");
+        t = (a.classList.add("gf25-cliente"), document.createElement("div")),
+        r = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"../images/semanacliente_logo.png\" alt=\"Giraflor Store\" />\n        <p>Acesso exclusivo, <br> <span> descontos maiores </span> somente das 10h \xE0s 22h</p>\n      </div>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>\n    </div>\n  ", a.appendChild(t), document.querySelector(".giraFriday_modal form")),
+        o = document.querySelector(".giraFriday_modal input");
       r.addEventListener("submit", function (e) {
-        if (e.preventDefault(), "giralovers" === s.value.toLowerCase()) {
-          localStorage.setItem("gf24-alcinhas", !0), a.classList.remove("gf24-alcinhas");
+        if (e.preventDefault(), "girasecreta" === o.value.toLowerCase()) {
+          localStorage.setItem("gf25-cliente", !0), a.classList.remove("gf25-cliente");
           var _t = document.querySelector(".giraFriday_overlay");
           setTimeout(function () {
             _t.remove();
           }, 500);
-        } else s.value = "SENHA INCORRETA", s.setAttribute("type", "text"), s.classList.add("error"), s.disable = !0, setTimeout(function () {
-          s.disable = !1, s.classList.remove("error"), s.value = "", s.setAttribute("type", "password");
+        } else o.value = "SENHA INCORRETA", o.setAttribute("type", "text"), o.classList.add("error"), o.disable = !0, setTimeout(function () {
+          o.disable = !1, o.classList.remove("error"), o.value = "", o.setAttribute("type", "password");
         }, 3e3);
       });
     }
