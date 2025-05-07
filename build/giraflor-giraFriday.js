@@ -30,7 +30,7 @@ var getTime = /*#__PURE__*/function () {
         a = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"https://raw.githubusercontent.com/pedro-samo/girafriday/refs/heads/master/images/encerramento/encerramento_logo.png\" alt=\"Giraflor Store\" />\n        <div class=\"giraFriday_modal-logo-text\"> <p>Foram 10 anos girando com voc\xEAs, criando com prop\xF3sito, vestindo com alma, atendendo mais de 400 mulheres incr\xEDveis todos os meses. E agora, chegou a hora de dar um desfecho consciente a essa fase t\xE3o linda. Aproveitem! </p></div>\n      </div>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>\n    </div>\n  ", o.appendChild(t), document.querySelector(".giraFriday_modal form")),
         r = document.querySelector(".giraFriday_modal input");
       a.addEventListener("submit", function (e) {
-        if (e.preventDefault(), "ultimogiro" === r.value.toLowerCase()) {
+        if (e.preventDefault(), "ultimogiro" === r.value.toLowerCase() || "últimogiro" === r.value.toLowerCase()) {
           localStorage.setItem("gf-encerramento", !0), o.classList.remove("gf-encerramento");
           var _t = document.querySelector(".giraFriday_overlay");
           setTimeout(function () {
