@@ -1,7 +1,7 @@
 const getTime = async () => {
   const currentTime = new Date();
-  const promoStartTime = new Date("2025-03-13T09:00:00.000000-03:00");
-  const promoEndTime = new Date("2025-03-13T22:00:00.000000-03:00");
+  const promoStartTime = new Date("2025-04-06T08:00:00.000000-03:00");
+  const promoEndTime = new Date("2030-05-06T08:00:00.000000-03:00");
 
   if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
     mountElmentBlock();
@@ -101,8 +101,8 @@ const mountElmentBlock = () => {
 // };
 
 window.addEventListener("DOMContentLoaded", () => {
-  // const IS_PRODUCTION = window.location.hostname === "www.giraflorstore.com.br";
-  // if (IS_PRODUCTION) return;
+  const IS_PRODUCTION = window.location.hostname === "www.giraflorstore.com.br";
+  if (IS_PRODUCTION) return;
   getTime();
   // changeGoBackButton();
 });
