@@ -9,21 +9,21 @@ const getTime = async () => {
 };
 
 const mountElmentBlock = () => {
-  const hasKeyOnLocalStorage = localStorage.getItem("gf25-cliente");
+  const hasKeyOnLocalStorage = localStorage.getItem("gf-encerramento");
 
   if (hasKeyOnLocalStorage === "true") return;
 
   const body = document.querySelector("body");
 
-  body.classList.add("gf25-cliente");
+  body.classList.add("gf-encerramento");
 
   const div = document.createElement("div");
   div.setAttribute("class", "giraFriday_overlay");
   div.innerHTML = `
     <div class="giraFriday_modal slide-top">
       <div class="giraFriday_modal-logo">
-        <img src="https://raw.githubusercontent.com/pedro-samo/girafriday/refs/heads/master/images/semanacliente_logo.png" alt="Giraflor Store" />
-        <div class="giraFriday_modal-logo-text"> <p> Acesso exclusivo, <br> <span> descontos maiores </span> somente das 10h às 22h </p></div>
+        <img src="https://raw.githubusercontent.com/pedro-samo/girafriday/refs/heads/master/images/encerramento/encerramento_logo.png" alt="Giraflor Store" />
+        <div class="giraFriday_modal-logo-text"> <p>Foram 10 anos girando com vocês, criando com propósito, vestindo com alma, atendendo mais de 400 mulheres incríveis todos os meses. E agora, chegou a hora de dar um desfecho consciente a essa fase tão linda. Aproveitem! </p></div>
       </div>
       <form>
         <input type="password" placeholder="Senha" />
@@ -38,9 +38,9 @@ const mountElmentBlock = () => {
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (input.value.toLowerCase() === "girasecreta") {
-      localStorage.setItem("gf25-cliente", true);
-      body.classList.remove("gf25-cliente");
+    if (input.value.toLowerCase() === "ultimogiro") {
+      localStorage.setItem("gf-encerramento", true);
+      body.classList.remove("gf-encerramento");
       const element = document.querySelector(".giraFriday_overlay");
       setTimeout(() => {
         element.remove();
@@ -101,8 +101,8 @@ const mountElmentBlock = () => {
 // };
 
 window.addEventListener("DOMContentLoaded", () => {
-  const IS_PRODUCTION = window.location.hostname === "www.giraflorstore.com.br";
-  if (IS_PRODUCTION) return;
+  // const IS_PRODUCTION = window.location.hostname === "www.giraflorstore.com.br";
+  // if (IS_PRODUCTION) return;
   getTime();
   // changeGoBackButton();
 });

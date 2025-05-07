@@ -14,12 +14,12 @@ body {
     background-image: url(/images/giraflor_mob.png);
   }
 
-  &.gf25-cliente {
+  &.gf-encerramento {
     overflow-y: hidden;
     pointer-events: none;
   }
 
-  &.gf25-cliente iframe {
+  &.gf-encerramento iframe {
     display: none !important;
   }
 }

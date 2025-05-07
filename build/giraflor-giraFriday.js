@@ -6,12 +6,12 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 var getTime = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-      var e, t, a;
+      var e, t, o;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-            e = new Date(), t = new Date("2025-03-13T09:00:00.000000-03:00"), a = new Date("2025-03-13T22:00:00.000000-03:00");
-            t <= e && e <= a && mountElmentBlock();
+            e = new Date(), t = new Date("2025-04-06T08:00:00.000000-03:00"), o = new Date("2030-05-06T08:00:00.000000-03:00");
+            t <= e && e <= o && mountElmentBlock();
           case 2:
           case "end":
             return _context.stop();
@@ -23,21 +23,21 @@ var getTime = /*#__PURE__*/function () {
     };
   }(),
   mountElmentBlock = function mountElmentBlock() {
-    var e = localStorage.getItem("gf25-cliente");
+    var e = localStorage.getItem("gf-encerramento");
     if ("true" !== e) {
-      var a = document.querySelector("body"),
-        t = (a.classList.add("gf25-cliente"), document.createElement("div")),
-        r = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"https://raw.githubusercontent.com/pedro-samo/girafriday/refs/heads/master/images/semanacliente_logo.png\" alt=\"Giraflor Store\" />\n        <div class=\"giraFriday_modal-logo-text\"> <p> Acesso exclusivo, <br> <span> descontos maiores </span> somente das 10h \xE0s 22h </p></div>\n      </div>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>\n    </div>\n  ", a.appendChild(t), document.querySelector(".giraFriday_modal form")),
-        o = document.querySelector(".giraFriday_modal input");
-      r.addEventListener("submit", function (e) {
-        if (e.preventDefault(), "girasecreta" === o.value.toLowerCase()) {
-          localStorage.setItem("gf25-cliente", !0), a.classList.remove("gf25-cliente");
+      var o = document.querySelector("body"),
+        t = (o.classList.add("gf-encerramento"), document.createElement("div")),
+        a = (t.setAttribute("class", "giraFriday_overlay"), t.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"https://raw.githubusercontent.com/pedro-samo/girafriday/refs/heads/master/images/encerramento/encerramento_logo.png\" alt=\"Giraflor Store\" />\n        <div class=\"giraFriday_modal-logo-text\"> <p>Foram 10 anos girando com voc\xEAs, criando com prop\xF3sito, vestindo com alma, atendendo mais de 400 mulheres incr\xEDveis todos os meses. E agora, chegou a hora de dar um desfecho consciente a essa fase t\xE3o linda. Aproveitem! </p></div>\n      </div>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n      <form>\n    </div>\n  ", o.appendChild(t), document.querySelector(".giraFriday_modal form")),
+        r = document.querySelector(".giraFriday_modal input");
+      a.addEventListener("submit", function (e) {
+        if (e.preventDefault(), "ultimogiro" === r.value.toLowerCase()) {
+          localStorage.setItem("gf-encerramento", !0), o.classList.remove("gf-encerramento");
           var _t = document.querySelector(".giraFriday_overlay");
           setTimeout(function () {
             _t.remove();
           }, 500);
-        } else o.value = "SENHA INCORRETA", o.setAttribute("type", "text"), o.classList.add("error"), o.disable = !0, setTimeout(function () {
-          o.disable = !1, o.classList.remove("error"), o.value = "", o.setAttribute("type", "password");
+        } else r.value = "SENHA INCORRETA", r.setAttribute("type", "text"), r.classList.add("error"), r.disable = !0, setTimeout(function () {
+          r.disable = !1, r.classList.remove("error"), r.value = "", r.setAttribute("type", "password");
         }, 3e3);
       });
     }
