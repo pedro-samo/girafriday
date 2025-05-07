@@ -38,7 +38,7 @@ const mountElmentBlock = () => {
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (input.value.toLowerCase() === "ultimogiro") {
+    if (input.value.toLowerCase() === "ultimogiro" || input.value.toLowerCase() === "últimogiro") {
       localStorage.setItem("gf-encerramento", true);
       body.classList.remove("gf-encerramento");
       const element = document.querySelector(".giraFriday_overlay");
