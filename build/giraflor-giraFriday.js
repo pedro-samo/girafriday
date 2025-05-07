@@ -10,7 +10,7 @@ var getTime = /*#__PURE__*/function () {
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-            e = new Date(), t = new Date("2025-04-06T08:00:00.000000-03:00"), o = new Date("2030-05-06T08:00:00.000000-03:00");
+            e = new Date(), t = new Date("2025-05-06T08:00:00.000000-03:00"), o = new Date("2030-05-06T08:00:00.000000-03:00");
             t <= e && e <= o && mountElmentBlock();
           case 2:
           case "end":
