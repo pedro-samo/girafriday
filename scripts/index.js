@@ -1,7 +1,7 @@
 const getTime = async () => {
   const currentTime = new Date();
   const promoStartTime = new Date("2025-05-06T08:00:00.000000-03:00");
-  const promoEndTime = new Date("2030-05-06T08:00:00.000000-03:00");
+  const promoEndTime = new Date("2025-05-06T08:00:00.000000-03:00");
 
   if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
     mountElmentBlock();
