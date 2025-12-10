@@ -100,7 +100,7 @@ const createLinkGira = () => {
 
   const hasShowLinkOnLocalStorage = localStorage.getItem("clubeGira2025Link");
 
-  if (!hasShowLinkOnLocalStorage !== "true") return;
+  if (hasShowLinkOnLocalStorage !== "true") return;
 
   if (desktopMenu) {
     const elementDesktop = `<li class="desktop-nav-item ">
