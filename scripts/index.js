@@ -89,7 +89,7 @@ const checkClubeGiraQueryParam = () => {
     return localStorage.removeItem("clubeGira2025Link");
   }
 
-  if (clubeGiraParam === "true") {
+  if (clubeGiraParam) {
     localStorage.setItem("clubeGira2025Link", "true");
   }
 };
