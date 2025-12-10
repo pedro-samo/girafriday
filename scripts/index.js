@@ -60,49 +60,10 @@ const mountElmentBlock = () => {
   });
 };
 
-// const changeGoBackButton = () => {
-//   const isCheckout = window.location.pathname.includes("carrinho");
-//   if (!isCheckout) return;
-
-//   const waitForElement = (selector, callback) => {
-//     const element = document.querySelector(selector);
-//     if (element) {
-//       callback(element);
-//     } else {
-//       const observer = new MutationObserver((mutations, observer) => {
-//         if (document.querySelector(selector)) {
-//           callback(document.querySelector(selector));
-//           observer.disconnect();
-//         }
-//       });
-
-//       observer.observe(document.body, {
-//         childList: true,
-//         subtree: true,
-//       });
-//     }
-//   };
-
-//   waitForElement(".cart-products-list", () => {
-//     const itensLink = document.querySelectorAll(".cart-item-name a");
-
-//     const hasPromotionalItem = Array.from(itensLink).some((item) => {
-//       return item.href.includes("promo-trico");
-//     });
-
-//     if (!hasPromotionalItem) return;
-
-//     const goBackButton = document.querySelector(".row .link");
-//     goBackButton.setAttribute(
-//       "href",
-//       "https://www.giraflorstore.com.br/promo-tricot-66a2a31fe987d"
-//     );
-//   });
-// };
-
 window.addEventListener("DOMContentLoaded", () => {
   // const IS_PRODUCTION = window.location.hostname === "www.giraflorstore.com.br";
   // if (IS_PRODUCTION) return;
-  getTime();
+  // getTime();
   // changeGoBackButton();
+  console.log("Script loaded");
 });

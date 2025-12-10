@@ -39,5 +39,9 @@ function gulpWatch() {
 exports.sassCompilation = sassCompilation;
 exports.gulpJs = gulpJs;
 exports.gulpWatch = gulpWatch;
+exports.build = gulp.parallel(sassCompilation, gulpJs);
 
-exports.default = gulp.parallel(gulpWatch, sassCompilation, gulpJs);
+exports.default = gulp.series(
+  gulp.parallel(sassCompilation, gulpJs),
+  gulpWatch
+);
