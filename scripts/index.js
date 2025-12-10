@@ -100,7 +100,7 @@ const createLinkGira = () => {
                     Clube Gira
                 </a>
              </li>`;
-    mobileMenu.prepend(elementMobile);
+    mobileMenu.insertAdjacentHTML("afterbegin", elementMobile);
   }
 };
 
