@@ -85,6 +85,13 @@ const checkClubeGiraQueryParam = () => {
   const currentTime = new Date();
   const promoEndTime = new Date("2025-12-14T23:59:00.000000-03:00");
 
+  if (currentTime < promoEndTime) {
+    const buttonGira = document.querySelector(
+      '[data-store="home-categories-featured"] ul li [title="Clube Gira"]'
+    );
+    buttonGira && buttonGira.remove();
+  }
+
   if (hasShowLinkOnLocalStorage && currentTime >= promoEndTime) {
     return localStorage.removeItem("clubeGira2025Link");
   }
