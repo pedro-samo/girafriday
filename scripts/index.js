@@ -59,7 +59,6 @@ const mountElmentBlock = () => {
       body.classList.remove("clubeGira2025Modal");
       const element = document.querySelector(".giraFriday_overlay");
       setTimeout(() => {
-        createLinkGira();
         element.remove();
       }, 500);
     } else {
