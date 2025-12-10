@@ -32,7 +32,7 @@ var runPromoModal = /*#__PURE__*/function () {
       while (1) switch (_context.prev = _context.next) {
         case 0:
           currentTime = new Date();
-          promoStartTime = new Date("2025-11-11T09:00:00.000000-03:00");
+          promoStartTime = new Date("2025-12-11T09:00:00.000000-03:00");
           promoEndTime = new Date("2025-12-11T14:00:00.000000-03:00");
           if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
             mountElmentBlock();
@@ -54,13 +54,22 @@ var mountElmentBlock = function mountElmentBlock() {
   body.classList.add("clubeGira2025Modal");
   var div = document.createElement("div");
   div.setAttribute("class", "giraFriday_overlay");
-  div.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <h3>Acesso Exclusivo</h3>\n        <div class=\"giraFriday_modal-logo-text\"> <p> Voc\xEA chegou at\xE9 aqui porque faz parte do <strong>Clube Gira!</strong> Aproveite o Site todo da Aventurina com <strong> desconto de 15%OFF </strong> para as participantes do Clube, hoje 11/12 das 9h \xE0s 14h. </p></div>\n      </div>\n      <form>\n        <input type=\"password\" placeholder=\"Senha\" />\n        <button type=\"submit\">Entrar</button>\n        <img src=\"../images/aventurina/aventurina_logos.png\" alt=\"Giraflor Store\" />\n      <form>\n    </div>\n  ";
+  div.innerHTML = "\n    <div class=\"giraFriday_modal slide-top\">\n      <div class=\"giraFriday_modal-logo\">\n        <img src=\"../images/aventurina/aventurina_logos_title.png\" alt=\"Gira Friday Logo\" />\n        <div class=\"giraFriday_modal-logo-text\"> \n          <p>Voc\xEA chegou at\xE9 aqui porque faz parte do <strong>Clube Gira!</strong> Aproveite o Site todo da Aventurina com <strong>desconto de 15%OFF</strong> para as participantes do Clube, </br> hoje \u2013 11/12 das 9h \xE0s 14h.</p>\n        </div>\n      </div>\n      <form>\n        <img src=\"../images/aventurina/aventurina_logos.png\" alt=\"Aventurina Logos\" />\n        <input name=\"password\" type=\"password\" placeholder=\"SENHA\" />\n        <button type=\"submit\" class=\"giraFriday_modal-button\">Entrar</button>\n      </form>\n    </div>\n  ";
   body.appendChild(div);
   var form = document.querySelector(".giraFriday_modal form");
-  var input = document.querySelector(".giraFriday_modal input");
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    if (input.value.toLowerCase() === "ultimogiro" || input.value.toLowerCase() === "últimogiro") {
+  var passwordInput = document.querySelector(".giraFriday_modal input[type='password']");
+  passwordInput.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      validatePassword();
+    }
+  });
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    validatePassword();
+  });
+  var validatePassword = function validatePassword() {
+    if (passwordInput.value.toLowerCase() === "leveza15") {
       localStorage.setItem("clubeGira2025Link", true);
       localStorage.setItem("clubeGira2025Modal", true);
       body.classList.remove("clubeGira2025Modal");
@@ -69,18 +78,18 @@ var mountElmentBlock = function mountElmentBlock() {
         element.remove();
       }, 500);
     } else {
-      input.value = "SENHA INCORRETA";
-      input.setAttribute("type", "text");
-      input.classList.add("error");
-      input.disable = true;
+      passwordInput.value = "SENHA INCORRETA";
+      passwordInput.setAttribute("type", "text");
+      passwordInput.classList.add("error");
+      passwordInput.disabled = true;
       setTimeout(function () {
-        input.disable = false;
-        input.classList.remove("error");
-        input.value = "";
-        input.setAttribute("type", "password");
+        passwordInput.disabled = false;
+        passwordInput.classList.remove("error");
+        passwordInput.value = "";
+        passwordInput.setAttribute("type", "password");
       }, 3000);
     }
-  });
+  };
 };
 var checkClubeGiraQueryParam = function checkClubeGiraQueryParam() {
   var urlParams = new URLSearchParams(window.location.search);
