@@ -9,7 +9,9 @@
     "build": "webpack --mode production",
     "watch": "webpack --watch"
   },
-  "dependencies": {},
+  "dependencies": {
+    "function-bind": "^1.1.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.23.2",
     "@babel/preset-env": "^7.23.2",

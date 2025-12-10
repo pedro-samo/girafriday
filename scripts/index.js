@@ -1,7 +1,7 @@
-const getTime = async () => {
+const runPromoModal = async () => {
   const currentTime = new Date();
-  const promoStartTime = new Date("2025-05-06T08:00:00.000000-03:00");
-  const promoEndTime = new Date("2025-05-06T08:00:00.000000-03:00");
+  const promoStartTime = new Date("2025-11-11T09:00:00.000000-03:00");
+  const promoEndTime = new Date("2025-12-11T14:00:00.000000-03:00");
 
   if (promoStartTime <= currentTime && promoEndTime >= currentTime) {
     mountElmentBlock();
@@ -9,30 +9,29 @@ const getTime = async () => {
 };
 
 const mountElmentBlock = () => {
-  const hasKeyOnLocalStorage = localStorage.getItem("gf-encerramento");
+  const hasKeyOnLocalStorage = localStorage.getItem("clubeGira2025Modal");
 
   if (hasKeyOnLocalStorage === "true") return;
 
   const body = document.querySelector("body");
-  ``;
-  body.classList.add("gf-encerramento");
+  body.classList.add("clubeGira2025Modal");
 
   const div = document.createElement("div");
   div.setAttribute("class", "giraFriday_overlay");
   div.innerHTML = `
     <div class="giraFriday_modal slide-top">
       <div class="giraFriday_modal-logo">
-        <img src="https://raw.githubusercontent.com/pedro-samo/girafriday/refs/heads/master/images/encerramento/encerramento_logo.png" alt="Giraflor Store" />
-        <div class="giraFriday_modal-logo-text"> <p>Foram 10 anos girando com vocês, criando com propósito, vestindo com alma, atendendo mais de 400 mulheres incríveis todos os meses. E agora, chegou a hora de dar um desfecho consciente a essa fase tão linda. Aproveitem! </p></div>
+        <h3>Acesso Exclusivo</h3>
+        <div class="giraFriday_modal-logo-text"> <p> Você chegou até aqui porque faz parte do <strong>Clube Gira!</strong> Aproveite o Site todo da Aventurina com <strong> desconto de 15%OFF </strong> para as participantes do Clube, hoje 11/12 das 9h às 14h. </p></div>
       </div>
       <form>
         <input type="password" placeholder="Senha" />
         <button type="submit">Entrar</button>
+        <img src="../images/aventurina/aventurina_logos.png" alt="Giraflor Store" />
       <form>
     </div>
   `;
   body.appendChild(div);
-  1;
 
   const form = document.querySelector(".giraFriday_modal form");
   const input = document.querySelector(".giraFriday_modal input");
@@ -43,8 +42,9 @@ const mountElmentBlock = () => {
       input.value.toLowerCase() === "ultimogiro" ||
       input.value.toLowerCase() === "últimogiro"
     ) {
-      localStorage.setItem("gf-encerramento", true);
-      body.classList.remove("gf-encerramento");
+      localStorage.setItem("clubeGira2025Link", true);
+      localStorage.setItem("clubeGira2025Modal", true);
+      body.classList.remove("clubeGira2025Modal");
       const element = document.querySelector(".giraFriday_overlay");
       setTimeout(() => {
         element.remove();
@@ -105,6 +105,7 @@ const createLinkGira = () => {
 };
 
 window.addEventListener("DOMContentLoaded", () => {
+  runPromoModal();
   checkClubeGiraQueryParam();
   createLinkGira();
 });
