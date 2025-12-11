@@ -89,13 +89,6 @@ const checkClubeGiraQueryParam = () => {
     return localStorage.removeItem("clubeGira2025Link");
   }
 
-  if (!clubeGiraParam) {
-    const buttonGira = document.querySelector(
-      '[data-store="home-categories-featured"] ul li [title="Clube Gira"]'
-    );
-    buttonGira && buttonGira.remove();
-  }
-
   if (clubeGiraParam) {
     localStorage.setItem("clubeGira2025Link", "true");
   }
@@ -105,9 +98,16 @@ const createLinkGira = () => {
   const desktopMenu = document.querySelector(".js-desktop-nav.desktop-nav");
   const mobileMenu = document.querySelector("#nav-hamburger .clear-both ul");
 
+  const buttonGira = document.querySelector(
+    '[data-store="home-categories-featured"] ul li [title="Clube Gira"]'
+  );
+
   const hasShowLinkOnLocalStorage = localStorage.getItem("clubeGira2025Link");
 
-  if (hasShowLinkOnLocalStorage !== "true") return;
+  if (hasShowLinkOnLocalStorage !== "true") {
+    buttonGira?.remove();
+    return;
+  }
 
   if (desktopMenu) {
     const elementDesktop = `<li class="desktop-nav-item ">
@@ -131,17 +131,6 @@ const createLinkGira = () => {
                 </a>
              </li>`;
     mobileMenu.insertAdjacentHTML("afterbegin", elementMobile);
-  }
-
-  const mainCategories = document.querySelector(
-    '[data-store="home-categories-featured"] ul'
-  );
-
-  if (mainCategories) {
-    const buttonGira = `<li class="pill" style="margin-right: -5px;">
-						<a class="pill-link" href="https://www.aaventurina.com.br/clube-gira" title="Clube Gira">Clube Gira</a>
-					</li>`;
-    mainCategories.insertAdjacentHTML("afterbegin", buttonGira);
   }
 };
 
