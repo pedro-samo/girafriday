@@ -1,2 +1,239 @@
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./styles/giraflor-giraFriday.scss ***!
+  \************************************************************************************************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
-.giraFriday_overlay{width:100vw;height:100vh;background-color:hsla(0,0%,100%,.6);position:fixed;display:flex;justify-content:center;align-items:center;pointer-events:all;top:0;z-index:2147483650 !important}.giraFriday_modal{width:650px;max-width:95vw;display:flex;align-items:center;gap:30px;justify-content:space-between;flex-direction:row;padding:60px 40px;background-color:#b25234;box-shadow:10px 10px 5px -7px rgba(0,0,0,.33);position:relative}@media only screen and (max-width: 968px){.giraFriday_modal{flex-direction:column;align-items:center;padding:40px 30px;width:80vw;gap:0px}}drop .giraFriday_modal.slide-top{animation:slide-top .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both}@keyframes slide-top{0%{transform:translateY(100px)}100%{transform:translateY(0px)}}.giraFriday_modal-logo{display:flex;align-items:flex-start;justify-content:flex-start;flex-direction:column;position:relative;flex:1;max-width:550px}@media only screen and (max-width: 968px){.giraFriday_modal-logo{max-width:100%;align-items:center}}.giraFriday_modal-logo img{max-width:350px;margin-bottom:20px}@media only screen and (max-width: 968px){.giraFriday_modal-logo img{max-width:300px}}.giraFriday_modal-logo-text{font-family:"Montserrat",sans-serif;font-size:18px;text-align:left;margin:0}@media only screen and (max-width: 968px){.giraFriday_modal-logo-text{text-align:center}}.giraFriday_modal-logo-text p{margin:0 0 15px 0;letter-spacing:.5px;line-height:1.5;font-size:16px;color:#ece2d5;font-weight:300}.giraFriday_modal-logo-text p strong{font-weight:700}@media only screen and (max-width: 968px){.giraFriday_modal-logo-text p{font-size:16px}}.giraFriday_modal-logo-text span{text-decoration:underline}.giraFriday_modal form{display:flex;flex-direction:column;width:320px;min-width:280px;align-items:stretch;justify-content:flex-end;position:relative}@media only screen and (max-width: 968px){.giraFriday_modal form{margin-top:10px;width:100%;max-width:400px}}.giraFriday_modal form img{max-width:130px;margin:30px auto}@media only screen and (max-width: 968px){.giraFriday_modal form img{position:relative;bottom:auto;right:auto;margin:20px auto;max-width:130px}}.giraFriday_modal form input{background-color:#e3cdbd;border:none;height:35px;font-size:14px;color:#b8421c;letter-spacing:3px;text-align:center;border-radius:30px;font-family:"Montserrat",sans-serif;font-weight:400;font-style:normal;text-transform:uppercase;margin-bottom:10px}.giraFriday_modal form input::-moz-placeholder{font-size:14px;font-family:"Montserrat",sans-serif;font-weight:400;font-style:normal;text-transform:uppercase;color:#b8421c;letter-spacing:3px}.giraFriday_modal form input::placeholder{font-size:14px;font-family:"Montserrat",sans-serif;font-weight:400;font-style:normal;text-transform:uppercase;color:#b8421c;letter-spacing:3px}.giraFriday_modal form input.error{background-color:#e3cdbd;font-family:"Montserrat",sans-serif;font-weight:400;font-style:normal;color:#b30202}@media only screen and (max-width: 968px){.giraFriday_modal form input.error{font-size:14px}}.giraFriday_modal form button{background-color:#e3cdbd;color:#b8421c;font-size:14px;font-family:"Montserrat",sans-serif;font-weight:400;font-style:normal;height:35px;text-transform:uppercase;border:none;cursor:pointer;letter-spacing:3px;border-radius:30px;transition:all .3s ease}@media only screen and (max-width: 968px){.giraFriday_modal form button{height:35px;font-size:14px}}.giraFriday_modal form button:hover{background-color:#d4baa7;transform:translateY(-2px)}body.clubeGira2025Modal{overflow-y:hidden;pointer-events:none}body.clubeGira2025Modal iframe{display:none !important}
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./styles/giraflor-giraFriday.scss (1) ***!
+  \****************************************************************************************************************************************************************************************************/
+.giraFriday_overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.6);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: all;
+  top: 0;
+  z-index: 2147483650 !important;
+}
+.giraFriday_modal {
+  width: 650px;
+  max-width: 95vw;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 60px 40px;
+  background-color: #b25234;
+  box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.33);
+  position: relative;
+}
+@media only screen and (max-width: 968px) {
+  .giraFriday_modal {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 30px;
+    width: 80vw;
+    gap: 0px;
+  }
+}
+drop .giraFriday_modal.slide-top {
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes slide-top {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.giraFriday_modal-logo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+  flex: 1;
+  max-width: 550px;
+}
+@media only screen and (max-width: 968px) {
+  .giraFriday_modal-logo {
+    max-width: 100%;
+    align-items: center;
+  }
+}
+.giraFriday_modal-logo img {
+  max-width: 350px;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 968px) {
+  .giraFriday_modal-logo img {
+    max-width: 300px;
+  }
+}
+.giraFriday_modal-logo-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  text-align: left;
+  margin: 0;
+}
+@media only screen and (max-width: 968px) {
+  .giraFriday_modal-logo-text {
+    text-align: center;
+  }
+}
+.giraFriday_modal-logo-text p {
+  margin: 0 0 15px 0;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #ece2d5;
+  font-weight: 300;
+}
+.giraFriday_modal-logo-text p strong {
+  font-weight: 700;
+}
+@media only screen and (max-width: 968px) {
+  .giraFriday_modal-logo-text p {
+    font-size: 16px;
+  }
+}
+.giraFriday_modal-logo-text span {
+  text-decoration: underline;
+}
+.giraFriday_modal-logo-text a {
+  margin: 0 0 15px 0;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  font-size: 14px;
+  color: #ece2d5;
+  font-weight: 300;
+}
+.giraFriday_modal-logo-text a:visited {
+  color: #ece2d5;
+}
+.giraFriday_modal form {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  min-width: 280px;
+  align-items: stretch;
+  justify-content: flex-end;
+  position: relative;
+}
+@media only screen and (max-width: 968px) {
+  .giraFriday_modal form {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 400px;
+  }
+}
+.giraFriday_modal form img {
+  max-width: 130px;
+  margin: 30px auto;
+}
+@media only screen and (max-width: 968px) {
+  .giraFriday_modal form img {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin: 20px auto;
+    max-width: 130px;
+  }
+}
+.giraFriday_modal form input {
+  background-color: #e3cdbd;
+  border: none;
+  height: 35px;
+  font-size: 14px;
+  color: #b8421c;
+  letter-spacing: 3px;
+  text-align: center;
+  border-radius: 30px !important;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.giraFriday_modal form input::-moz-placeholder {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #b8421c;
+  letter-spacing: 3px;
+}
+.giraFriday_modal form input::placeholder {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #b8421c;
+  letter-spacing: 3px;
+}
+.giraFriday_modal form input.error {
+  background-color: #e3cdbd;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(179, 2, 2);
+}
+@media only screen and (max-width: 968px) {
+  .giraFriday_modal form input.error {
+    font-size: 14px;
+  }
+}
+.giraFriday_modal form button {
+  background-color: #e3cdbd;
+  color: #b8421c;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  height: 35px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 3px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+@media only screen and (max-width: 968px) {
+  .giraFriday_modal form button {
+    height: 35px;
+    font-size: 14px;
+  }
+}
+.giraFriday_modal form button:hover {
+  background-color: #d4baa7;
+  transform: translateY(-2px);
+}
+
+body {
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: url(076c3971e54000026a18.png);
+}
+@media only screen and (max-width: 768px) {
+  body {
+    background-image: url(658a5d14ece2123adcfa.png);
+  }
+}
+body.clubeGira2025Modal {
+  overflow-y: hidden;
+  pointer-events: none;
+}
+body.clubeGira2025Modal iframe {
+  display: none !important;
+}

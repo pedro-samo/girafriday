@@ -24,6 +24,7 @@ const mountElmentBlock = () => {
         <img src="https://github.com/pedro-samo/girafriday/blob/master/images/aventurina/aventurina_logos_title.png?raw=true" alt="Gira Friday Logo" />
         <div class="giraFriday_modal-logo-text"> 
           <p>Você chegou até aqui porque faz parte do <strong>Clube Gira!</strong> Aproveite o Site todo da Aventurina com <strong>desconto de 15%OFF</strong> para as participantes do Clube, </br> hoje – 11/12 das 9h às 14h.</p>
+          <a href="https://lp.clubegira.com.br/clubegira-vestidos" target="_blank">Se você ainda não faz parte do clube, cadastre aqui para fazer parte e receber o seu acesso !</a>
         </div>
       </div>
       <form>
