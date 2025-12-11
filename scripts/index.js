@@ -55,7 +55,6 @@ const mountElmentBlock = () => {
 
   const validatePassword = () => {
     if (passwordInput.value.toLowerCase() === "leveza15") {
-      localStorage.setItem("clubeGira2025Link", true);
       localStorage.setItem("clubeGira2025Modal", true);
       body.classList.remove("clubeGira2025Modal");
       const element = document.querySelector(".giraFriday_overlay");
