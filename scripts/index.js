@@ -21,14 +21,14 @@ const mountElmentBlock = () => {
   div.innerHTML = `
     <div class="giraFriday_modal slide-top">
       <div class="giraFriday_modal-logo">
-        <img src="https://github.com/pedro-samo/girafriday/blob/master/images/aventurina/aventurina_logos_title.png?raw=true" alt="Gira Friday Logo" />
+        <img src="https://pedro-samo.github.io/girafriday/images/aventurina/aventurina_logos_title.png" alt="Gira Friday Logo" />
         <div class="giraFriday_modal-logo-text"> 
           <p>Você chegou até aqui porque faz parte do <strong>Clube Gira!</strong> Aproveite o Site todo da Aventurina com <strong>desconto de 15%OFF</strong> para as participantes do Clube, </br> hoje – 11/12 das 9h às 14h.</p>
           <a href="https://lp.clubegira.com.br/clubegira-vestidos" target="_blank">Se você ainda não faz parte do Clube, cadastre-se aqui para entrar e receber o seu acesso.</a>
         </div>
       </div>
       <form>
-        <img src="https://github.com/pedro-samo/girafriday/blob/master/images/aventurina/aventurina_logos.png?raw=true" alt="Aventurina Logos" />
+        <img src="https://pedro-samo.github.io/girafriday/images/aventurina/aventurina_logos.png" alt="Aventurina Logos" />
         <input name="password" type="password" placeholder="SENHA" />
         <button type="submit" class="giraFriday_modal-button">Entrar</button>
       </form>

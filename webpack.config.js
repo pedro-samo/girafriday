@@ -1,5 +1,6 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: "production",
@@ -44,6 +45,14 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: "giraflor-giraFriday.css",
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "images",
+          to: "images",
+        },
+      ],
     }),
   ],
   devtool: false,
